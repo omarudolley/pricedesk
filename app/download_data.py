@@ -5,7 +5,7 @@ from loguru import logger
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from app.constants import GOOGLE_DRIVE_PATH, LISTING_CSV_PATH, LISTING_JSON_PATH
-from app.utils import read_from_file, save_as_json
+from app.utils import save_as_json
 from pathlib import Path
 
 

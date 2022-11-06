@@ -15,7 +15,7 @@ def save_as_json(destination, data):
     )
 
 
-def read_from_json(path):
+def read_json_from_file(path):
     logger.debug("Reading {path}", path=path)
     pth = Path(path)
     if not pth.exists():
