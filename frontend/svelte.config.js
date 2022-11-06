@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static'
 import preprocess from 'svelte-preprocess'
+import { optimizeImports } from 'carbon-preprocess-svelte'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,11 +15,16 @@ const config = {
           '@use "src/styles/variables.scss" as *;' +
           '@use "src/styles/mixins.scss" as *;'
       }
-    })
+    }),
+    optimizeImports()
   ],
 
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    alias: {
+      $components: 'src/components',
+      $lib: 'src/lib'
+    }
   }
 }
 

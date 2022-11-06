@@ -1,3 +1,29 @@
+// https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#overview
+
+// Carbon configuration
+$css--font-face: true;
+$css--helpers: true;
+$css--body: true;
+$css--use-layer: true;
+$css--reset: true;
+$css--default-type: true;
+$css--plex: true;
+
+// Include defaults typically provided through the `styles.scss` entrypoint
+@import 'carbon-components/scss/globals/scss/_css--reset.scss';
+@import 'carbon-components/scss/globals/scss/_css--font-face.scss';
+@import 'carbon-components/scss/globals/scss/_css--helpers.scss';
+@import 'carbon-components/scss/globals/scss/_css--body.scss';
+// @import 'carbon-components/scss/globals/scss/_theme.scss';
+
+// import font
+@import url('https://api.fonts.coollabs.io/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Include globals
+@import 'carbon-components/scss/globals/grid/_grid.scss';
+
+@import 'carbon-components-svelte/css/all.css';
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
