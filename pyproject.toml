@@ -10,6 +10,8 @@ python = "^3.9"
 gdown = "^4.5.3"
 loguru = "^0.6.0"
 tenacity = "^8.1.0"
+pydantic = "^1.10.2"
+humanize = "^4.4.0"
 
 [tool.poetry.scripts]
 download = "app.download_data:main"

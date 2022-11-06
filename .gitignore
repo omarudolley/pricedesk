@@ -8,7 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+frontend/build/
 develop-eggs/
 dist/
 downloads/
@@ -108,15 +108,10 @@ venv.bak/
 .vscode
 .DS_Store
 
-# Firebase
-firebase-debug.log
-firestore-debug.log
-ui-debug.log
 
 # Frontend
-node_modules
-smui.css
-.svelte-kit
+frontend/node_modules
+frontend/.svelte-kit
 
 .gcloud-account-key.json
 secrets-file

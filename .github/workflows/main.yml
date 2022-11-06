@@ -2,7 +2,7 @@ name: Build and update to GitHub Pages
 
 on:
   schedule:
-    - cron: "0 10,18 * * *"
+    - cron: '0 10,18 * * *'
   push:
     branches:
       - main
@@ -36,7 +36,7 @@ jobs:
       - uses: actions/cache@v2
         id: cache
         with:
-          path: pricedesk/src/data
+          path: frontend/src/lib/data
           key: ${{ hashFiles('data/*.json', 'app/*.py', 'pyproject.toml', 'poetry.lock') }}
 
       - name: Commit latest data files if updated
@@ -68,11 +68,11 @@ jobs:
 
       - name: Build frontend
         run: |
-          cp -f data/*.json pricedesk/src/data
-          cd pricedesk
+          cp -f data/*.json frontend/src/lib/data
+          cd frontend
           pnpm install --frozen-lockfile
           pnpm run build
- 
+
       - name: Deploy to GitHub Pages
         if: success()
         run: |
@@ -86,7 +86,7 @@ jobs:
           git add . && git status && git commit --message "${MESSAGE}"
           git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
         env:
-          DEPLOY_DIR: pricedesk/build
+          DEPLOY_DIR: frontend/build
           MESSAGE: Deploy to GitHub Pages
           BRANCH: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
