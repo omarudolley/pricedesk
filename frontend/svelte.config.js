@@ -11,12 +11,13 @@ const config = {
       scss: {
         // make variables accessible in components without explicit import
         prependData:
-          '@use "src/styles/variables.scss" as *;' + '@use "src/styles/mixins.scss" as *;'
+          '@use "src/styles/index.scss" as *;' +
+          '@use "src/styles/variables.scss" as *;' +
+          '@use "src/styles/mixins.scss" as *;'
       }
     }),
     optimizeImports()
   ],
-
   kit: {
     adapter: adapter(),
     alias: {

@@ -40,7 +40,7 @@
       ]}
     />
     <HeaderNav>
-      <HeaderNavItem href="/faq" text="FAQ" />
+      <HeaderNavItem href="faq" text="FAQ" />
     </HeaderNav>
   </Header>
 </div>
