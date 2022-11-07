@@ -8,6 +8,7 @@
     Content
   } from 'carbon-components-svelte'
   import '../styles/index.scss'
+  import { base } from '$app/paths'
 
   let isSideNavOpen = false
   $: innerWidth = 0
@@ -47,7 +48,7 @@
       ]}
     />
     <HeaderNav>
-      <HeaderNavItem href="faq" text="FAQ" />
+      <HeaderNavItem href="{base}/faq" text="FAQ" />
     </HeaderNav>
   </Header>
 </div>
