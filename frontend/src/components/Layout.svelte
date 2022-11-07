@@ -12,6 +12,12 @@
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
+  import { setLocation } from '$lib/stores'
+
+  function setLocationCode(event: CustomEvent) {
+    const newIdentityId = event.detail.selectedId
+    setLocation(newIdentityId)
+  }
 </script>
 
 <svelte:window bind:innerWidth />
@@ -24,11 +30,12 @@
 
     <Dropdown
       class="dropdowns"
-      selectedId="0"
+      selectedId="dl"
+      on:select={setLocationCode}
       items={[
-        { id: '0', text: 'Duala' },
-        { id: '1', text: 'Redlight' },
-        { id: '2', text: 'Waterside' }
+        { id: 'dl', text: 'Duala' },
+        { id: 'rl', text: 'Redlight' },
+        { id: 'ws', text: 'Waterside' }
       ]}
     />
     <Dropdown
