@@ -14,7 +14,7 @@
   $: isWideScreen = innerWidth >= 1056
   import { setLocation } from '$lib/stores'
 
-  function setLocationCode(event: CustomEvent) {
+  function setLocationCode(event) {
     const newIdentityId = event.detail.selectedId
     setLocation(newIdentityId)
   }
