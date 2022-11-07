@@ -86,7 +86,8 @@
       :global(.bx--header__name) {
         font-size: 1.5rem;
         @include mobile {
-          font-size: 1.2rem;
+          font-size: 1rem;
+          max-width: 6rem;
         }
       }
       :global(.bx--header__nav) {
@@ -97,7 +98,8 @@
         font-size: 1.2rem;
 
         @include mobile {
-          margin: 0;
+          margin-right: auto;
+          padding: 0;
           font-size: inherit;
         }
       }
