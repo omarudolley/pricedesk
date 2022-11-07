@@ -7,7 +7,9 @@
     "Coca cola": "2",
     "Diesel": "5",
     "Eggs": "2",
+    "Garri": "",
     "Gasoline": "5",
+    "Milk": "",
     "Palm oil": "3",
     "Pepsi": "2",
     "Rice": "4",
@@ -16,6 +18,7 @@
     "USD buying rate": "2",
     "USD selling rate": "2",
     "Vegetable oil": "2",
+    "Water bootle ": "",
     "Water sack": "2"
   },
   "11/6/2022 7:42:11": {
@@ -26,7 +29,9 @@
     "Coca cola": "2",
     "Diesel": "2",
     "Eggs": "2",
+    "Garri": "",
     "Gasoline": "3",
+    "Milk": "",
     "Palm oil": "2",
     "Pepsi": "2",
     "Rice": "4",
@@ -35,6 +40,7 @@
     "USD buying rate": "2",
     "USD selling rate": "2",
     "Vegetable oil": "2",
+    "Water bootle ": "",
     "Water sack": "2"
   }
 }
