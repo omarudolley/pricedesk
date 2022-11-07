@@ -29,7 +29,9 @@ def download_json_data(source, dest):
         data_dict = {}
 
         for row in csv_reader:
-            data_dict[row["Timestamp"]] = row
+            timestamp = row["Timestamp"]
+            del row["Timestamp"]
+            data_dict[timestamp] = row
 
         save_as_json(dest, data_dict)
 
@@ -38,16 +40,18 @@ def download_json_data(source, dest):
 @analyze_memory
 def main():
     # Load data from external services
-    logger.info("Downloading data from google drive")
 
+    logger.info("Downloading data for Redlight area")
     download_json_data(
         generate_google_drive_url(RED_LIGHT_LISTING_ID), RED_LIGHT_LISTING_JSON_PATH
     )
 
-    download_json_data(
-        generate_google_drive_url(DUALA_LISTING_ID), DUALA_LISTING_JSON_PATH
-    )
-
+    logger.info("Downloading data for Waterside area")
     download_json_data(
         generate_google_drive_url(WATERSIDE_LISTING_ID), WATERSIDE_LISTING_JSON_PATH
+    )
+
+    logger.info("Downloading data for Duala area")
+    download_json_data(
+        generate_google_drive_url(DUALA_LISTING_ID), DUALA_LISTING_JSON_PATH
     )
