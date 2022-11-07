@@ -3,14 +3,9 @@
     Header,
     HeaderNav,
     HeaderNavItem,
-    HeaderNavMenu,
+    Dropdown,
     SkipToContent,
-    Content,
-    SideNav,
-    SideNavLink,
-    SideNavMenu,
-    SideNavItems,
-    SideNavMenuItem
+    Content
   } from 'carbon-components-svelte'
   import '../styles/index.scss'
 
@@ -22,44 +17,36 @@
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header platformName="PriceDesk" bind:isSideNavOpen persistentHamburgerMenu={true}>
+  <Header platformName="PriceDesk" bind:isSideNavOpen>
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
-    <HeaderNav>
-      <HeaderNavItem href="/" text="FAQ" />
-      <HeaderNavMenu text="Currency">
-        <HeaderNavItem href="/" text="USD" />
-        <HeaderNavItem href="/" text="LRD" />
-      </HeaderNavMenu>
 
-      <HeaderNavMenu text="Locations">
-        <HeaderNavItem href="/" text="Red Light" />
-        <HeaderNavItem href="/" text="Waterside" />
-        <HeaderNavItem href="/" text="Duala" />
-      </HeaderNavMenu>
+    <Dropdown
+      class="dropdowns"
+      selectedId="0"
+      items={[
+        { id: '0', text: 'Duala' },
+        { id: '1', text: 'Redlight' },
+        { id: '2', text: 'Waterside' }
+      ]}
+    />
+    <Dropdown
+      class="dropdowns"
+      selectedId="0"
+      items={[
+        { id: '0', text: 'USD' },
+        { id: '1', text: 'LRD' }
+      ]}
+    />
+    <HeaderNav>
+      <HeaderNavItem href="/faq" text="FAQ" />
     </HeaderNav>
   </Header>
 </div>
 
 <div class="layout" class:is-wide-screen={isWideScreen}>
   <div class="content-wrapper">
-    <SideNav bind:isOpen={isSideNavOpen}>
-      <SideNavItems>
-        <SideNavLink href="/" text="FAQ" />
-
-        <SideNavMenu text="Currency">
-          <SideNavMenuItem href="/" text="USD" />
-          <SideNavMenuItem href="/" text="LRD" />
-        </SideNavMenu>
-
-        <SideNavMenu text="Locations">
-          <SideNavMenuItem href="/" text="Red Light" />
-          <SideNavMenuItem href="/" text="Waterside" />
-          <SideNavMenuItem href="/" text="Duala" />
-        </SideNavMenu>
-      </SideNavItems>
-    </SideNav>
     <Content>
       <div class="main">
         <slot />
@@ -87,6 +74,56 @@
     :global(header) {
       max-width: $max-container-width;
       margin: 0 auto;
+
+      :global(.bx--header__name) {
+        font-size: 1.5rem;
+        @include mobile {
+          font-size: 1.2rem;
+        }
+      }
+      :global(.bx--header__nav) {
+        display: flex;
+        margin-left: auto;
+        margin-right: 2rem;
+        color: white;
+        font-size: 1.2rem;
+
+        @include mobile {
+          margin: 0;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  :global(.dropdowns) {
+    :global(.bx--dropdown) {
+      background-color: transparent;
+      border-bottom: none;
+      height: auto;
+
+      :global(.bx--list-box__field) {
+        height: auto;
+      }
+      :global(.bx--list-box__label) {
+        color: white;
+        font-size: 1.2rem;
+        @include mobile {
+          font-size: inherit;
+        }
+      }
+      :global(.bx--list-box__menu-icon > svg) {
+        fill: white;
+      }
+    }
+
+    :global(.bx--form__helper-text) {
+      margin: 0 1rem;
+      color: #85fbc2;
+      font-size: 0.8rem;
+      @include mobile {
+        font-size: inherit;
+      }
     }
   }
 
@@ -95,7 +132,7 @@
     max-width: $max-container-width;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 3rem);
+    min-height: 100vh;
 
     .content-wrapper {
       display: flex;
