@@ -19,10 +19,22 @@ const config = {
     optimizeImports()
   ],
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      pages: 'build',
+      assets: 'build',
+      fallback: null,
+      precompress: false
+    }),
     alias: {
       $components: 'src/components',
       $lib: 'src/lib'
+    },
+    prerender: {
+      default: true
+    },
+    trailingSlash: 'always',
+    paths: {
+      base: '/pricedesk'
     }
   }
 }
