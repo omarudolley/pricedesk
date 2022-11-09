@@ -3,6 +3,8 @@ import preprocess from 'svelte-preprocess'
 import { optimizeImports } from 'carbon-preprocess-svelte'
 
 /** @type {import('@sveltejs/kit').Config} */
+
+console.log(process.env.NODE_ENV)
 const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
@@ -17,13 +19,11 @@ const config = {
     optimizeImports()
   ],
   kit: {
+    appDir: 'pricedesk/_app',
     adapter: adapter(),
     alias: {
       $components: 'src/components',
       $lib: 'src/lib'
-    },
-    paths: {
-      base: '/pricedesk'
     }
   }
 }
