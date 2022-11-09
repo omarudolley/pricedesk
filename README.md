@@ -1,41 +1,60 @@
-# create-svelte
+# MarketRateLiberia
 
-Everything you need to build a Svelte project, powered by
-[`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+MarketRateLiberia aims to provide accurate and up-to-date information about the prices of basis
+commodities in Liberia.
 
-## Creating a project
+GitHub Actions are used to automatically download latest data and rebuild the site.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The generated site is hosted on GitHub Pages at
+[https://omarudolley.github.io/pricedesk/](https://omarudolley.github.io/pricedesk/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Project setup
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Install prerequisites
 
-## Developing
+Install `poetry` to manage Python dependencies:
+[https://python-poetry.org/docs/#installation](https://python-poetry.org/docs/#installation)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or
-`yarn`), start a development server:
+Install `pre-commit` to do automatic code analysis and formatting before committing changes:
+[https://pre-commit.com/#install](https://pre-commit.com/#install)
 
-```bash
-npm run dev
+### Get/update data from Google drive
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+After cloning the repository, you will need to download the latest data from Google Drive.
 
 ```bash
-npm run build
+poetry install
+poetry run download
 ```
 
-You can preview the production build with `npm run preview`.
+### Install front-end dependencies
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for
-> your target environment.
+```bash
+cd frontend/
+pnpm install
+```
+
+### Compiles and hot-reloads for development
+
+```bash
+pnpm run dev
+```
+
+### Compiles and minifies for production
+
+```bash
+pnpm run build
+```
+
+# How to contribute?
+
+If you have a suggestion about something that could be improved or wish to help with the technical
+development, please take a look here: https://github.com/omarudolley/pricedesk/issues
+
+All suggestions and ideas are welcome. Please feel free to fork the project, raise new issues, or
+make pull requests.
+
+# License and data information
+
+This repository is maintained as an open source project and released under an
+[MIT license](LICENSE).

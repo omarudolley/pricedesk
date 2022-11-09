@@ -7,7 +7,6 @@
     SkipToContent,
     Content
   } from 'carbon-components-svelte'
-  import '../styles/index.scss'
   import { base } from '$app/paths'
 
   let isSideNavOpen = false
@@ -68,6 +67,7 @@
 </div>
 
 <style lang="scss">
+  @import 'src/styles/index.scss';
   $max-container-width: 105rem;
 
   .header-wrapper {
