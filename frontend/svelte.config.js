@@ -19,11 +19,13 @@ const config = {
     optimizeImports()
   ],
   kit: {
-    appDir: 'pricedesk/_app',
     adapter: adapter(),
     alias: {
       $components: 'src/components',
       $lib: 'src/lib'
+    },
+    paths: {
+      base: 'https://omarudolley.github.io/pricedesk'
     }
   }
 }

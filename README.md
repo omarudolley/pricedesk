@@ -1,6 +1,6 @@
 # MarketRateLiberia
 
-MarketRateLiberia aims to provide accurate and up-to-date information about the prices of basis
+MarketRateLiberia aims to provide accurate and up-to-date information about the price of basis
 commodities in Liberia.
 
 GitHub Actions are used to automatically download latest data and rebuild the site.
