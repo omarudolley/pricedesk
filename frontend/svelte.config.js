@@ -25,7 +25,7 @@ const config = {
       $lib: 'src/lib'
     },
     paths: {
-      base: 'https://omarudolley.github.io/pricedesk'
+      base: '/pricedesk'
     }
   }
 }
