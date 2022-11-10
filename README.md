@@ -1,12 +1,12 @@
-# MarketRateLiberia
+# Liberia MarketIndex
 
-MarketRateLiberia aims to provide accurate and up-to-date information about the price of basis
+LiberiaMarketIndex aims to provide accurate and up-to-date information about the price of basis
 commodities in Liberia.
 
 GitHub Actions are used to automatically download latest data and rebuild the site.
 
 The generated site is hosted on GitHub Pages at
-[https://omarudolley.github.io/pricedesk/](https://omarudolley.github.io/pricedesk/)
+[https://libmarketindex.com/](https://libmarketindex.com/)
 
 ## Project setup
 

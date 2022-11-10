@@ -62,7 +62,9 @@
   </div>
   <div class="footer">
     Proposals for additional features are welcome on our Github —
-    https://github.com/omarudolley/pricedesk/issues
+    <a href="https://github.com/omarudolley/pricedesk/issues"
+      >https://github.com/omarudolley/pricedesk/issues</a
+    >
   </div>
 </div>
 
