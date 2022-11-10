@@ -72,7 +72,6 @@ jobs:
           cd frontend
           pnpm install --frozen-lockfile
           pnpm run build
-          touch ./build/.nojekyll
       - name: Deploy to GitHub Pages
         if: success()
         run: |
@@ -83,6 +82,7 @@ jobs:
           git init . && git checkout --orphan "${BRANCH}"
           cp -r "${SRC}/${DEPLOY_DIR}"/* .
           [[ ! -z "${FQDN}" ]] && echo "${FQDN}" > CNAME
+          touch ./build/.nojekyll
           git add . && git status && git commit --message "${MESSAGE}"
           git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
         env:
