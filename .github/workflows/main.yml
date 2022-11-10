@@ -72,7 +72,7 @@ jobs:
           cd frontend
           pnpm install --frozen-lockfile
           pnpm run build
-      - run: touch ./build/.nojekyll
+          touch ./build/.nojekyll
       - name: Deploy to GitHub Pages
         if: success()
         run: |
