@@ -12,9 +12,11 @@ loguru = "^0.6.0"
 tenacity = "^8.1.0"
 pydantic = "^1.10.2"
 humanize = "^4.4.0"
+pandas = "^1.5.1"
 
 [tool.poetry.scripts]
 download = "app.download_data:main"
+generate = "app.generate_data:main"
 
 [tool.skjold]
 report_only = false

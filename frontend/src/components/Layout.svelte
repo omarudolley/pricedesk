@@ -12,38 +12,29 @@
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
-  import { setLocation } from '$lib/stores'
+  import { setCurrency } from '$lib/stores'
 
-  function setLocationCode(event) {
+  function setCurrencyCode(event) {
     const newIdentityId = event.detail.selectedId
-    setLocation(newIdentityId)
+    setCurrency(newIdentityId)
   }
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header platformName="PriceDesk" bind:isSideNavOpen>
+  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen>
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
 
     <Dropdown
       class="dropdowns"
-      selectedId="dl"
-      on:select={setLocationCode}
+      selectedId="usd"
+      on:select={setCurrencyCode}
       items={[
-        { id: 'dl', text: 'Duala' },
-        { id: 'rl', text: 'Redlight' },
-        { id: 'ws', text: 'Waterside' }
-      ]}
-    />
-    <Dropdown
-      class="dropdowns"
-      selectedId="0"
-      items={[
-        { id: '0', text: 'USD' },
-        { id: '1', text: 'LRD' }
+        { id: 'usd', text: 'USD' },
+        { id: 'lrd', text: 'LRD' }
       ]}
     />
     <HeaderNav>
@@ -63,7 +54,7 @@
   <div class="footer">
     Proposals for additional features are welcome on our Github —
 
-    <a href="https://github.com/omarudolley/pricedesk/issues">
+    <a href="https://github.com/omarudolley/pricedesk/issues" target="_blank">
       https://github.com/omarudolley/pricedesk/issues
     </a>
   </div>
@@ -137,6 +128,9 @@
       @include mobile {
         font-size: inherit;
       }
+    }
+    @include mobile {
+      margin-left: 5rem;
     }
   }
 

@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "GitHub"
           git config --global user.email "<noreply@github.com>"
-          cp -ar data /tmp
+          cp -ar data/average /tmp
           for i in 1 2 3 4 5; do
             # Reset local to origin
             git fetch --all
@@ -65,6 +65,9 @@ jobs:
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate data
+        run: poetry run generate
 
       - name: Build frontend
         run: |

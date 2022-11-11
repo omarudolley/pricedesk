@@ -1,21 +1,20 @@
 import { writable } from 'svelte/store'
-import locations from '$lib/data/locations.json'
-import type { Locations } from '$lib/types'
+import currencies from '$lib/data/currency.json'
 
 let listingCache: Record<string, string>
-let cachedLocation: string
+let cachedCurrency: string
 
-export const currentLocation = writable(locations[0])
-let _currentLocation: Locations
-currentLocation.subscribe(async (value) => {
-  _currentLocation = value
+export const currentCurrency = writable(currencies[0])
+let _currentCurrency: { name: string; code: string }
+currentCurrency.subscribe(async (value) => {
+  _currentCurrency = value
   await getListing()
 })
 
 async function getListing() {
-  if (cachedLocation !== _currentLocation.code) {
-    listingCache = (await import(`./data/${_currentLocation.code}/listing.json`)).default
-    cachedLocation = _currentLocation.code
+  if (cachedCurrency !== _currentCurrency.code) {
+    listingCache = (await import(`$lib/data/average/${_currentCurrency.code}/listing.json`)).default
+    cachedCurrency = _currentCurrency.code
   }
   return listingCache
 }
@@ -28,10 +27,10 @@ async function init() {
 
 init()
 
-export async function setLocation(languageCode: string) {
-  locations.forEach((value) => {
+export async function setCurrency(languageCode: string) {
+  currencies.forEach((value) => {
     if (value.code === languageCode) {
-      currentLocation.set(value)
+      currentCurrency.set(value)
     }
   })
   currentListing.set(await getListing())
