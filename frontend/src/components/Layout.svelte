@@ -62,9 +62,10 @@
   </div>
   <div class="footer">
     Proposals for additional features are welcome on our Github —
-    <a href="https://github.com/omarudolley/pricedesk/issues"
-      >https://github.com/omarudolley/pricedesk/issues</a
-    >
+
+    <a href="https://github.com/omarudolley/pricedesk/issues">
+      https://github.com/omarudolley/pricedesk/issues
+    </a>
   </div>
 </div>
 
@@ -200,9 +201,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     background: $color-blue-light;
 
     margin-top: auto;
     padding: 2rem 0;
+
+    @include mobile {
+      font-size: 0.8rem;
+    }
   }
 </style>

@@ -1,6 +1,6 @@
-# Liberia MarketIndex
+# Market Index
 
-LiberiaMarketIndex aims to provide accurate and up-to-date information about the price of basis
+Market Index aims to provide accurate and up-to-date information about the price of basis
 commodities in Liberia.
 
 GitHub Actions are used to automatically download latest data and rebuild the site.
