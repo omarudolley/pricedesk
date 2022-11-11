@@ -89,4 +89,5 @@ jobs:
           DEPLOY_DIR: frontend/build
           MESSAGE: Deploy to GitHub Pages
           BRANCH: gh-pages
+          FQDN: https://libmarketindex.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
