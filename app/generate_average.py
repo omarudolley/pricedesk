@@ -36,6 +36,9 @@ def main():
     average_date_lrd = combined_data.groupby("Date").mean()
     average_date_usd = generate_in_usd(average_date_lrd)
 
+    average_date_lrd = average_date_lrd.round(2)
+    average_date_usd = average_date_usd.round(2)
+
     average_date_lrd_dict = average_date_lrd.to_dict("index")
     average_date_usd_dict = average_date_usd.to_dict("index")
 
