@@ -13,10 +13,11 @@ def generate_in_usd(df):
 
     exchange_rate = df["USD buying rate"]
 
-    df_without_exchange_rates = df_without_exchange_rates.mul(
+    df_without_exchange_rates = df_without_exchange_rates.div(
         exchange_rate, axis="index"
     )
 
     combined_df = df_without_exchange_rates.combine_first(df)
 
     return combined_df
+
