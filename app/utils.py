@@ -15,7 +15,7 @@ _DEBUG_MEMORY = True
 
 def save_as_json(destination, data):
     logger.debug("Writing {dst}", dst=destination)
-    pth = Path(destination).mkdir(parents=True, exist_ok=True)
+    pth = Path(destination)
     pth.write_text(
         json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True).replace(
             "NaN", "null"
