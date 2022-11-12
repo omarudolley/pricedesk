@@ -23,7 +23,7 @@
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen>
+  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen href="/">
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>

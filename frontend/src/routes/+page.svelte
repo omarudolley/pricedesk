@@ -1,13 +1,13 @@
 <script>
   import { currentListing, currentCurrency } from '$lib/stores'
-  import { getTodayDate } from '$lib/utils.ts'
+  import { getTodayDate } from '$lib/utils'
   const today = getTodayDate()
 </script>
 
 <div class="container">
   <div class="inner">
-    {#if $currentListing}
-      {#each Object.entries($currentListing[today]) as [key, value]}
+    {#if $currentListing && typeof $currentListing !== 'undefined'}
+      {#each Object.entries($currentListing?.[today] || {}) as [key, value]}
         <div class="item">
           <p class="name">{key}</p>
           <p class="value">{$currentCurrency.name} {value}</p>
@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 
     .inner {
       max-width: 80rem;
