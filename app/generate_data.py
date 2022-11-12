@@ -110,6 +110,7 @@ def main():
                 logger.error("Caught KeyboardInterrupt, terminating workers")
                 pool.terminate()
                 raise
+    shutil.rmtree(RAW_DATA_PATH)
 
 
 if __name__ == "__main__":

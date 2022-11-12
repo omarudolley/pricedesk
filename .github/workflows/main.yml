@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --global user.name "GitHub"
           git config --global user.email "<noreply@github.com>"
-          cp -ar data/average /tmp
+          cp -ar data /tmp
           for i in 1 2 3 4 5; do
             # Reset local to origin
             git fetch --all
