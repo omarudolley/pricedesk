@@ -3,7 +3,6 @@
 </script>
 
 <div class="container">
-  <h1>Welcome to FAQ</h1>
   <div class="content">
     {#each faqs as item}
       <div class="item">
@@ -21,8 +20,6 @@
 <style lang="scss">
   .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     padding: 2rem;
 

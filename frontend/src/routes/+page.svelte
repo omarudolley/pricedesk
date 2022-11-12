@@ -7,7 +7,8 @@
 <div class="container">
   <div class="inner">
     {#if $currentListing && typeof $currentListing !== 'undefined'}
-      {#each Object.entries($currentListing?.[today] || {}) as [key, value]}
+      {@const priceListing = Object.entries($currentListing?.[today] || {})}
+      {#each priceListing as [key, value]}
         <div class="item">
           <p class="name">{key}</p>
           <p class="value">{$currentCurrency.name} {value}</p>
