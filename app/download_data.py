@@ -30,7 +30,7 @@ def download_json_data(source, dest):
 def main():
     # Load data from external services
 
-    os.mkdir(RAW_DATA_PATH)
+    os.makedirs(RAW_DATA_PATH)
 
     logger.info("Downloading data for Redlight area")
     download_json_data(
