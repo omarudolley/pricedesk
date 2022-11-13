@@ -268,7 +268,7 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "4523462004ffeeb1df047c54105105149170682cad65bb9f85abf4e05a8bb579"
+content-hash = "2dccd9537c40be1585a4db594a99e675a9cf8bd0fa91e76caab8b5df0d45a2e1"
 
 [metadata.files]
 beautifulsoup4 = [

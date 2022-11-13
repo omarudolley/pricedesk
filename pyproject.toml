@@ -13,6 +13,7 @@ tenacity = "^8.1.0"
 pydantic = "^1.10.2"
 humanize = "^4.4.0"
 pandas = "^1.5.1"
+numpy = "^1.23.4"
 
 [tool.poetry.scripts]
 download = "app.download_data:main"

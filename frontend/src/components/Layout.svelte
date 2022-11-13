@@ -12,7 +12,7 @@
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
-  import { setCurrency } from '$lib/stores'
+  import { setCurrency, currentListing } from '$lib/stores'
 
   function setCurrencyCode(event) {
     const newIdentityId = event.detail.selectedId
@@ -27,7 +27,9 @@
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
-
+    {#if $currentListing && typeof $currentListing !== 'undefined'}
+      <p class="last-update">{$currentListing.updatedOn}</p>
+    {/if}
     <Dropdown
       class="dropdowns"
       selectedId="usd"
@@ -74,7 +76,7 @@
     right: 0;
 
     :global(header) {
-      max-width: $max-container-width;
+      max-width: 80rem;
       margin: 0 auto;
 
       :global(.bx--header__name) {
@@ -189,6 +191,9 @@
 
   .main {
     min-height: 100%;
+    max-width: 80rem;
+    width: 100%;
+    margin: auto;
   }
 
   .footer {
@@ -203,6 +208,18 @@
 
     @include mobile {
       font-size: 0.8rem;
+    }
+  }
+
+  .last-update {
+    position: absolute;
+    top: 3rem;
+    left: 1.2rem;
+    color: white;
+    font-size: 0.6rem;
+
+    &::before {
+      content: 'Last updated ';
     }
   }
 </style>

@@ -1,9 +1,9 @@
 <script>
-  import Dashboard from '$components/Dashboard.svelte'
+  import StatusBar from '$components/StatusBar.svelte'
 </script>
 
 <div class="container">
-  <Dashboard />
+  <StatusBar />
 </div>
 
 <style lang="scss">
@@ -11,6 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    @include mobile {
+      padding: 1rem;
+    }
   }
 </style>

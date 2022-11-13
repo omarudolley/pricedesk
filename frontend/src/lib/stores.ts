@@ -13,7 +13,7 @@ currentCurrency.subscribe(async (value) => {
 
 async function getListing() {
   if (cachedCurrency !== _currentCurrency.code) {
-    listingCache = (await import(`$lib/data/average/${_currentCurrency.code}/listing.json`)).default
+    listingCache = (await import(`$lib/data/stats/${_currentCurrency.code}/StatsBar.json`)).default
     cachedCurrency = _currentCurrency.code
   }
   return listingCache

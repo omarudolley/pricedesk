@@ -21,14 +21,13 @@
   .container {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
 
     .content {
       display: flex;
       flex-direction: column;
       max-width: 80rem;
       .item {
-        padding: 1rem;
+        padding: 1.5rem;
       }
     }
   }
