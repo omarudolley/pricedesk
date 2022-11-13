@@ -20,4 +20,3 @@ def generate_in_usd(df):
     combined_df = df_without_exchange_rates.combine_first(df)
 
     return combined_df
-
