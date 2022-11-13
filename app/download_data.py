@@ -1,4 +1,5 @@
 import csv
+import os
 
 import gdown
 from loguru import logger
@@ -11,6 +12,7 @@ from app.constants import (
     DUALA_LISTING_ID,
     WATERSIDE_LISTING_ID,
     WATERSIDE_LISTING_CSV_PATH,
+    RAW_DATA_PATH,
 )
 from app.utils import save_as_json, analyze_time, analyze_memory
 from pathlib import Path
@@ -27,6 +29,8 @@ def download_json_data(source, dest):
 @analyze_memory
 def main():
     # Load data from external services
+
+    os.mkdir(RAW_DATA_PATH)
 
     logger.info("Downloading data for Redlight area")
     download_json_data(

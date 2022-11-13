@@ -13,7 +13,7 @@ RED_LIGHT_LISTING_CSV_PATH = "data/raw/redlight.csv"
 DUALA_LISTING_CSV_PATH = "data/raw/duala.csv"
 WATERSIDE_LISTING_CSV_PATH = "data/raw/waterside.csv"
 
-RAW_DATA_PATH = "data/raw/"
+RAW_DATA_PATH = "data/raw"
 
 LIBERIA_TZ = pytz.timezone("GMT")
 
