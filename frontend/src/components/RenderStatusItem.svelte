@@ -12,7 +12,7 @@
       <p
         class="item_change {priceListing[`${title}_change`] === 0
           ? 'neutral'
-          : priceListing[title] > 0
+          : priceListing[`${title}_change`] > 0
           ? 'positive'
           : 'negative'}"
       >
