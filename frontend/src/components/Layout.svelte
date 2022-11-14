@@ -67,17 +67,18 @@
   $max-container-width: 105rem;
 
   .header-wrapper {
-    background-color: #161616;
     width: 100%;
     position: fixed;
     z-index: 9000;
     top: 0;
     left: 0;
     right: 0;
+    background: $color-deep-background;
 
     :global(header) {
-      max-width: 80rem;
+      max-width: $container-max-width;
       margin: 0 auto;
+      background: $color-deep-background;
 
       :global(.bx--header__name) {
         font-size: 1.5rem;
@@ -92,6 +93,11 @@
         margin-right: 2rem;
         color: white;
         font-size: 1.2rem;
+        :global(.bx--header__menu-item) {
+          &:hover {
+            background: $color-deep-background;
+          }
+        }
 
         @include mobile {
           margin-right: auto;
@@ -123,14 +129,6 @@
       }
     }
 
-    :global(.bx--form__helper-text) {
-      margin: 0 1rem;
-      color: #85fbc2;
-      font-size: 0.8rem;
-      @include mobile {
-        font-size: inherit;
-      }
-    }
     @include mobile {
       margin-left: 5rem;
     }
@@ -142,6 +140,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: $color-background;
 
     .content-wrapper {
       display: flex;
@@ -191,7 +190,7 @@
 
   .main {
     min-height: 100%;
-    max-width: 80rem;
+    max-width: $container-max-width;
     width: 100%;
     margin: auto;
   }

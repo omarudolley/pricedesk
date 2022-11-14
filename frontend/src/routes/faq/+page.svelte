@@ -25,7 +25,7 @@
     .content {
       display: flex;
       flex-direction: column;
-      max-width: 80rem;
+      max-width: $container-max-width;
       .item {
         padding: 1.5rem;
       }

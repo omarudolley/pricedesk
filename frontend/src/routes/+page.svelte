@@ -8,9 +8,6 @@
 
 <style lang="scss">
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     @include mobile {
       padding: 1rem;
     }
