@@ -1,19 +1,19 @@
 <script>
   import { faqs } from '$lib/data'
+  import { Accordion, AccordionItem } from "carbon-components-svelte"
 </script>
 
 <div class="container">
   <div class="content">
-    {#each faqs as item}
-      <div class="item">
-        <h5>
-          {item.question}
-        </h5>
-        <p>
-          {item.answer}
-        </p>
-      </div>
-    {/each}
+    <Accordion size="xl">
+      {#each faqs as item}
+        <AccordionItem title={item.question}>
+      <p>
+        {item.answer}
+      </p >
+    </AccordionItem>
+      {/each}
+        </Accordion>
   </div>
 </div>
 
