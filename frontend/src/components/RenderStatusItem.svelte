@@ -8,7 +8,12 @@
     <div class="item_icon" />
     <div class="item_info">
       <p class="item-heading">{title}</p>
-      <p class="item_price">{priceListing[title]}</p>
+      {#if title.startsWith('USD')}
+        <p class="item_price">{priceListing[title]}</p>
+      {:else}
+        <p class="item_price">$ {priceListing[title]}</p>
+      {/if}
+
       <p
         class="item_change {priceListing[`${title}_change`] === 0
           ? 'neutral'
