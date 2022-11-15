@@ -21,7 +21,11 @@
           ? 'positive'
           : 'negative'}"
       >
-        {priceListing[`${title}_change`]}
+        {priceListing[`${title}_change`] === 0
+          ? '-'
+          : priceListing[`${title}_change`] > 0
+          ? priceListing[`${title}_change`]
+          : Math.abs(priceListing[`${title}_change`])}
       </p>
     </div>
   </div>
@@ -109,11 +113,14 @@
       .positive {
         color: $color-error;
         &::before {
-          content: '+';
+          content: '\2191';
         }
       }
       .negative {
         color: $color-success;
+        &::before {
+          content: '\2193';
+        }
       }
       .neutral {
         color: $color-neutral;
