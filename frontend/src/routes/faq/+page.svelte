@@ -1,20 +1,20 @@
 <script>
   import { faqs } from '$lib/data'
-  import { Accordion, AccordionItem } from "carbon-components-svelte"
+  import { Accordion, AccordionItem } from 'carbon-components-svelte'
 </script>
 
 <div class="container">
   <div class="content">
-    <h2 class="header"> Frequestly asked questions: </h2>
+    <h2 class="header">Frequently asked questions:</h2>
     <Accordion size="xl">
       {#each faqs as item}
         <AccordionItem title={item.question}>
-      <p>
-        {item.answer}
-      </p >
-    </AccordionItem>
+          <p>
+            {item.answer}
+          </p>
+        </AccordionItem>
       {/each}
-        </Accordion>
+    </Accordion>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
 
-    .header{
+    .header {
       margin-bottom: 2rem;
     }
 

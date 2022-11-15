@@ -50,14 +50,15 @@
   .item {
     position: relative;
     display: grid;
-    grid-template-columns: 46px auto;
-    gap: 10px;
+    grid-template-columns: 2.875rem auto;
+    gap: 0.625rem;
     width: 100%;
-    min-width: 220px;
-    max-width: 320px;
-    padding: 10px;
-    border-radius: 10px;
+    min-width: 13.75rem;
+    max-width: 20rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    background: $color-background;
 
     .item_info {
       display: grid;
@@ -69,7 +70,6 @@
         font-size: 1rem;
         line-height: 1.12rem;
         max-width: 10rem;
-        font-weight: 600;
         color: $color-black;
         margin: 0;
         display: -webkit-box;
@@ -81,8 +81,8 @@
 
       .item_price {
         font-style: normal;
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.2rem;
         color: $color-black;
         margin: 0;
         display: -webkit-box;
