@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="content">
-    <h2> Frequestly asked questions: </h2>
+    <h2 class="header"> Frequestly asked questions: </h2>
     <Accordion size="xl">
       {#each faqs as item}
         <AccordionItem title={item.question}>
@@ -23,10 +23,15 @@
     display: flex;
     flex-direction: column;
 
+    .header{
+      margin-bottom: 2rem;
+    }
+
     .content {
       display: flex;
       flex-direction: column;
       max-width: $container-max-width;
+
       .item {
         padding: 1.5rem;
       }
