@@ -5,6 +5,7 @@
 
 <div class="container">
   <div class="content">
+    <h2> Frequestly asked questions: </h2>
     <Accordion size="xl">
       {#each faqs as item}
         <AccordionItem title={item.question}>
