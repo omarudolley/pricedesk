@@ -8,12 +8,12 @@
     <Accordion size="xl">
       {#each faqs as item}
         <AccordionItem title={item.question}>
-      <p>
-        {item.answer}
-      </p >
-    </AccordionItem>
+          <p>
+            {item.answer}
+          </p>
+        </AccordionItem>
       {/each}
-        </Accordion>
+    </Accordion>
   </div>
 </div>
 
