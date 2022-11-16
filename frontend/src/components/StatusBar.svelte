@@ -2,6 +2,18 @@
   import { currentListing } from '$lib/stores'
   import RenderStatusItem from '$components/RenderStatusItem.svelte'
   import { commodities } from '$lib/data'
+
+  import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte'
+  import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte'
+
+  let miniList = commodities.slice(1, 13)
+  $: listingToRender = miniList
+  let toggleDownArrow
+
+  function showOrHideMore() {
+    listingToRender = toggleDownArrow ? miniList : commodities
+    toggleDownArrow = !toggleDownArrow
+  }
 </script>
 
 <div class="wrapper">
@@ -17,17 +29,27 @@
     </div>
 
     <div class="inner bottom">
-      {#each commodities as title}
+      {#each listingToRender as title}
         <RenderStatusItem {title} {priceListing} />
       {/each}
     </div>
   {/if}
+  <div class="arrow" on:click={showOrHideMore}>
+    {#if toggleDownArrow}
+      <MdKeyboardArrowUp />
+      <p>show less</p>
+    {:else}
+      <MdKeyboardArrowDown />
+      <p>show more</p>
+    {/if}
+  </div>
 </div>
 
 <style lang="scss">
   .wrapper {
     background: #8fc2ff;
     border-radius: 1.25rem;
+    position: relative;
 
     .header {
       width: 100%;
@@ -61,6 +83,24 @@
     }
     .underline {
       padding: 0 2rem;
+    }
+  }
+  .arrow {
+    position: absolute;
+    width: 6rem;
+    height: 3rem;
+    left: calc(50% - 3rem);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    p {
+      margin: 0;
+      padding: 0;
     }
   }
 </style>
