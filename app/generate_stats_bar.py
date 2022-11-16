@@ -1,7 +1,6 @@
 from app.utils import analyze_memory
 from app.utils import analyze_time
 from app.utils import logger
-from app.utils import read_json_from_file
 from app.utils import save_as_json
 from app.helper import generate_in_usd
 
@@ -38,11 +37,13 @@ def main():
     mean_df_lrd = combined_df.groupby("Date").mean()
     mean_df_usd = generate_in_usd(mean_df_lrd)
 
-    mean_df_lrd = mean_df_lrd.round(1)
+    mean_df_lrd = mean_df_lrd.round(0)
     mean_df_usd = mean_df_usd.round(2)
 
     final_usd_data = {"updatedOn": TODAY_DMYHM}
     final_ld_data = {"updatedOn": TODAY_DMYHM}
+
+    print(mean_df_lrd)
 
     for item in COMMODITY_LIST:
         final_ld_data[f"{item}_change"] = round(np.diff(mean_df_lrd[item])[-1], 2)

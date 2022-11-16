@@ -3,54 +3,36 @@
   export let priceListing
 </script>
 
-<a class="wrapper">
-  <div class="item">
-    <div class="item_icon" />
-    <div class="item_info">
-      <p class="item-heading">{title}</p>
-      {#if title.startsWith('USD')}
-        <p class="item_price">{priceListing[title]}</p>
-      {:else}
-        <p class="item_price">$ {priceListing[title]}</p>
-      {/if}
-
-      <p
-        class="item_change {priceListing[`${title}_change`] === 0
-          ? 'neutral'
-          : priceListing[`${title}_change`] > 0
-          ? 'positive'
-          : 'negative'}"
-      >
-        {priceListing[`${title}_change`] === 0
-          ? '-'
-          : priceListing[`${title}_change`] > 0
-          ? priceListing[`${title}_change`]
-          : Math.abs(priceListing[`${title}_change`])}
-      </p>
-    </div>
+<div class="item">
+  <div class="item_icon" />
+  <div class="item_info">
+    <p class="item-heading">{title}</p>
+    {#if title.startsWith('USD')}
+      <p class="item_price">{priceListing[title]}</p>
+    {:else}
+      <p class="item_price">$ {priceListing[title]}</p>
+    {/if}
+    <p
+      class="item_change {priceListing[`${title}_change`] === 0
+        ? 'neutral'
+        : priceListing[`${title}_change`] > 0
+        ? 'positive'
+        : 'negative'}"
+    >
+      {priceListing[`${title}_change`] === 0
+        ? '-'
+        : priceListing[`${title}_change`] > 0
+        ? priceListing[`${title}_change`]
+        : Math.abs(priceListing[`${title}_change`])}
+    </p>
   </div>
-</a>
+</div>
 
 <style lang="scss">
-  .wrapper {
-    text-decoration: none;
-    width: 100%;
-    background-color: transparent;
-    border-radius: 0.3rem;
-    &:link,
-    &:visited,
-    &:focus,
-    &:hover,
-    &:active {
-      cursor: pointer;
-      background: $color-light-background;
-    }
-  }
-
   .item {
     position: relative;
     display: grid;
-    grid-template-columns: 2.875rem auto;
+    grid-template-columns: 0.5rem auto;
     gap: 0.625rem;
     width: 100%;
     min-width: 13.75rem;
@@ -59,11 +41,11 @@
     border-radius: 0.625rem;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
     background: $color-background;
+    cursor: pointer;
 
     .item_info {
       display: grid;
       gap: 8px;
-      align-self: center;
 
       .item-heading {
         font-style: normal;

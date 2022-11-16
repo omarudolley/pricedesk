@@ -50,6 +50,7 @@
       gap: 0.5rem;
       justify-items: left;
       padding: 1.875rem;
+      grid-auto-rows: 1fr;
     }
     .top {
       padding-bottom: 0.2rem;
