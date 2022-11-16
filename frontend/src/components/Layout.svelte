@@ -73,14 +73,17 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $color-deep-background;
+    background: $color-background;
 
+    color: black;
     :global(header) {
       max-width: $container-max-width;
       margin: 0 auto;
-      background: $color-deep-background;
+      background: $color-background;
+      color: black;
 
       :global(.bx--header__name) {
+        color: black;
         font-size: 1.5rem;
         @include mobile {
           font-size: 1rem;
@@ -88,14 +91,17 @@
         }
       }
       :global(.bx--header__nav) {
+        font-weight: 600;
         display: flex;
         margin-left: auto;
         margin-right: 2rem;
-        color: white;
+
         font-size: 1.2rem;
         :global(.bx--header__menu-item) {
+          color: black;
           &:hover {
-            background: $color-deep-background;
+            color: black;
+            background: $color-background;
           }
         }
 
@@ -118,14 +124,14 @@
         height: auto;
       }
       :global(.bx--list-box__label) {
-        color: white;
+        color: black;
         font-size: 1.2rem;
         @include mobile {
           font-size: inherit;
         }
       }
       :global(.bx--list-box__menu-icon > svg) {
-        fill: white;
+        fill: black;
       }
     }
 
@@ -200,7 +206,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: $color-blue-light;
+
+    background: $color-background;
 
     margin-top: auto;
     padding: 2rem 0;
@@ -214,11 +221,11 @@
     position: absolute;
     top: 3rem;
     left: 1.2rem;
-    color: white;
+    color: black;
     font-size: 0.6rem;
 
     &::before {
-      content: 'Last updated ';
+      content: 'Last update ';
     }
   }
 </style>
