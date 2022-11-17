@@ -6,17 +6,17 @@
 
 <div class="container">
   <div class="content">
-    <h2 class="header">
-      {#if $currentLang === 'en'}Frequently asked questions:{:else}Questions fréquemment posées:{/if}
-    </h2>
+    <h2 class="header">Frequently asked questions:</h2>
     <Accordion size="xl">
-      {#each faqs[$currentLang] as item}
-        <AccordionItem title={item.question}>
-          <p>
-            {item.answer}
-          </p>
-        </AccordionItem>
-      {/each}
+      {#if $currentLang}
+        {#each faqs[$currentLang] as item}
+          <AccordionItem title={item.question}>
+            <p>
+              {item.answer}
+            </p>
+          </AccordionItem>
+        {/each}
+      {/if}
     </Accordion>
   </div>
 </div>

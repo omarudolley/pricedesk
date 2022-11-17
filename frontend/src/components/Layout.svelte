@@ -16,6 +16,7 @@
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
   import { setCurrency, currentListing, currentLang } from '$lib/stores'
+  import { getCurrentLang } from '$lib/utils'
 
   function setCurrencyCode(event) {
     const newIdentityId = event.detail.selectedId
@@ -23,14 +24,19 @@
   }
 
   $: {
-    currentLang.set($page.url.hash.substring(1, 3))
+    currentLang.set(getCurrentLang($page.url.pathname))
   }
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen href="/#{$currentLang}">
+  <Header
+    company="Liberia"
+    platformName="MarketIndex"
+    bind:isSideNavOpen
+    href="{base}/{$currentLang}"
+  >
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
@@ -48,10 +54,10 @@
     />
 
     <HeaderNav>
-      <HeaderNavItem href="{base}/faq/{$page.url.hash}" text="faq" />
-      <HeaderNavMenu text={$page.url.hash.substring(1, 3) || 'en'}>
-        <HeaderNavItem href="#en" text="en" />
-        <HeaderNavItem href="#fr" text="fr" />
+      <HeaderNavItem href="{base}/faq/{$currentLang}" text="faq" />
+      <HeaderNavMenu text={$currentLang || 'en'}>
+        <HeaderNavItem href="en" text="en" />
+        <HeaderNavItem href="fr" text="fr" />
       </HeaderNavMenu>
     </HeaderNav>
   </Header>
