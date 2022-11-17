@@ -35,3 +35,5 @@ export async function setCurrency(languageCode: string) {
   })
   currentListing.set(await getListing())
 }
+
+export const currentLang = writable('en')

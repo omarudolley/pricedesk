@@ -1,13 +1,16 @@
 <script>
   import { faqs } from '$lib/data'
+  import { currentLang } from '$lib/stores'
   import { Accordion, AccordionItem } from 'carbon-components-svelte'
 </script>
 
 <div class="container">
   <div class="content">
-    <h2 class="header">Frequently asked questions:</h2>
+    <h2 class="header">
+      {#if $currentLang === 'en'}Frequently asked questions:{:else}Questions fréquemment posées:{/if}
+    </h2>
     <Accordion size="xl">
-      {#each faqs as item}
+      {#each faqs[$currentLang] as item}
         <AccordionItem title={item.question}>
           <p>
             {item.answer}
@@ -23,8 +26,18 @@
     display: flex;
     flex-direction: column;
 
+    @include mobile {
+      padding: 1rem;
+    }
+
     .header {
       margin-bottom: 2rem;
+      font-weight: 600;
+      padding: 1rem;
+
+      @include mobile {
+        font-size: 1rem;
+      }
     }
 
     .content {

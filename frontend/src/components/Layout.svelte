@@ -5,30 +5,37 @@
     HeaderNavItem,
     Dropdown,
     SkipToContent,
-    Content
+    Content,
+    HeaderNavMenu
   } from 'carbon-components-svelte'
   import { base } from '$app/paths'
+  import { page } from '$app/stores'
+  import { websiteContent } from '$lib/data'
 
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
-  import { setCurrency, currentListing } from '$lib/stores'
+  import { setCurrency, currentListing, currentLang } from '$lib/stores'
 
   function setCurrencyCode(event) {
     const newIdentityId = event.detail.selectedId
     setCurrency(newIdentityId)
+  }
+
+  $: {
+    currentLang.set($page.url.hash.substring(1, 3))
   }
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen href="/">
+  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen href="/#{$currentLang}">
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
     {#if $currentListing && typeof $currentListing !== 'undefined'}
-      <p class="last-update">{$currentListing.updatedOn}</p>
+      <p class="last-update">{websiteContent.update[$currentLang]} {$currentListing.updatedOn}</p>
     {/if}
     <Dropdown
       class="dropdowns"
@@ -39,8 +46,13 @@
         { id: 'lrd', text: 'LRD' }
       ]}
     />
+
     <HeaderNav>
-      <HeaderNavItem href="{base}/faq" text="FAQ" />
+      <HeaderNavItem href="{base}/faq/{$page.url.hash}" text="faq" />
+      <HeaderNavMenu text={$page.url.hash.substring(1, 3) || 'en'}>
+        <HeaderNavItem href="#en" text="en" />
+        <HeaderNavItem href="#fr" text="fr" />
+      </HeaderNavMenu>
     </HeaderNav>
   </Header>
 </div>
@@ -54,7 +66,7 @@
     </Content>
   </div>
   <div class="footer">
-    Proposals for additional features are welcome on our Github —
+    {websiteContent.footer[$currentLang]} —
 
     <a href="https://github.com/omarudolley/pricedesk/issues" target="_blank">
       https://github.com/omarudolley/pricedesk/issues
@@ -97,6 +109,41 @@
         margin-right: 2rem;
 
         font-size: 1.2rem;
+        :global(.bx--header__menu) {
+          width: 4.5rem;
+
+          color: black;
+          background: $color-background;
+          :global(.bx--header__menu-item) {
+            color: black;
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              background: $color-background;
+            }
+          }
+        }
+        :global(.bx--header__menu-title) {
+          width: 4rem;
+          background: $color-background;
+          color: black;
+        }
+        :global(.bx--header__menu-title > svg) {
+          fill: black;
+          &:hover,
+          &:focus {
+            fill: black;
+          }
+        }
+        :global(.bx--header__submenu) {
+          color: black;
+          background: $color-background;
+          &:hover,
+          &:focus {
+            color: black;
+            background: $color-background;
+          }
+        }
         :global(.bx--header__menu-item) {
           color: black;
           &:hover {
@@ -223,9 +270,5 @@
     left: 1.2rem;
     color: black;
     font-size: 0.6rem;
-
-    &::before {
-      content: 'Last update ';
-    }
   }
 </style>

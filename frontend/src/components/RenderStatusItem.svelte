@@ -1,4 +1,5 @@
 <script>
+  import { currentLang } from '$lib/stores'
   export let title
   export let priceListing
 </script>
@@ -6,24 +7,24 @@
 <div class="item">
   <div class="item_icon" />
   <div class="item_info">
-    <p class="item-heading">{title}</p>
-    {#if title.startsWith('USD')}
-      <p class="item_price">{priceListing[title]}</p>
+    <p class="item-heading">{title[$currentLang]}</p>
+    {#if title.en.startsWith('USD')}
+      <p class="item_price">{priceListing[title.en]}</p>
     {:else}
-      <p class="item_price">$ {priceListing[title]}</p>
+      <p class="item_price">$ {priceListing[title.en]}</p>
     {/if}
     <p
-      class="item_change {priceListing[`${title}_change`] === 0
+      class="item_change {priceListing[`${title.en}_change`] === 0
         ? 'neutral'
-        : priceListing[`${title}_change`] > 0
+        : priceListing[`${title.en}_change`] > 0
         ? 'positive'
         : 'negative'}"
     >
-      {priceListing[`${title}_change`] === 0
+      {priceListing[`${title.en}_change`] === 0
         ? '-'
-        : priceListing[`${title}_change`] > 0
-        ? priceListing[`${title}_change`]
-        : Math.abs(priceListing[`${title}_change`])}
+        : priceListing[`${title.en}_change`] > 0
+        ? priceListing[`${title.en}_change`]
+        : Math.abs(priceListing[`${title.en}_change`])}
     </p>
   </div>
 </div>

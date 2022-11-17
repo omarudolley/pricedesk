@@ -1,7 +1,7 @@
 <script>
-  import { currentListing } from '$lib/stores'
+  import { currentListing, currentLang } from '$lib/stores'
   import RenderStatusItem from '$components/RenderStatusItem.svelte'
-  import { commodities } from '$lib/data'
+  import { commodities, websiteContent } from '$lib/data'
 
   import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte'
   import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte'
@@ -20,9 +20,9 @@
   {#if $currentListing && typeof $currentListing !== 'undefined'}
     {@const priceListing = Object.freeze($currentListing)}
     <div class="inner top">
-      <div class="header">Follow the Liberian market easily in one place.</div>
-      <RenderStatusItem title="USD buying rate" {priceListing} />
-      <RenderStatusItem title="USD selling rate" {priceListing} />
+      <div class="header">{websiteContent.intro[$currentLang]}</div>
+      <RenderStatusItem title={{ en: 'USD buying rate', fr: "USD taux d'achat" }} {priceListing} />
+      <RenderStatusItem title={{ en: 'USD buying rate', fr: 'USD taux de vente' }} {priceListing} />
     </div>
     <div class="underline">
       <hr />
@@ -37,10 +37,10 @@
   <div class="arrow" on:click={showOrHideMore}>
     {#if toggleDownArrow}
       <MdKeyboardArrowUp />
-      <p>show less</p>
+      <p>{websiteContent.less[$currentLang]}</p>
     {:else}
       <MdKeyboardArrowDown />
-      <p>show more</p>
+      <p>{websiteContent.more[$currentLang]}</p>
     {/if}
   </div>
 </div>

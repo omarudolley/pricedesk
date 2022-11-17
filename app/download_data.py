@@ -30,8 +30,6 @@ def download_json_data(source, dest):
 def main():
     # Load data from external services
 
-    os.makedirs(RAW_DATA_PATH)
-
     logger.info("Downloading data for Redlight area")
     download_json_data(
         generate_google_drive_url(RED_LIGHT_LISTING_ID), RED_LIGHT_LISTING_CSV_PATH

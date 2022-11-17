@@ -7,7 +7,6 @@ from datetime import timedelta
 from multiprocessing import Pool
 from pathlib import Path
 from time import time
-import shutil
 
 from humanize import precisedelta
 
@@ -110,7 +109,6 @@ def main():
                 logger.error("Caught KeyboardInterrupt, terminating workers")
                 pool.terminate()
                 raise
-    shutil.rmtree(RAW_DATA_PATH)
 
 
 if __name__ == "__main__":
