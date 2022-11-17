@@ -116,7 +116,7 @@
 
         font-size: 1.2rem;
         :global(.bx--header__menu) {
-          width: 4.5rem;
+          width: 4rem;
 
           color: black;
           background: $color-background;
@@ -204,6 +204,7 @@
     .content-wrapper {
       display: flex;
       min-height: 100%;
+      margin-bottom: 2rem;
     }
   }
 
@@ -263,7 +264,7 @@
     background: $color-background;
 
     margin-top: auto;
-    padding: 2rem 0;
+    padding: 2rem 0.5rem;
 
     @include mobile {
       font-size: 0.8rem;
