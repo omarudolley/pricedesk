@@ -6,7 +6,9 @@
 
 <div class="container">
   <div class="content">
-    <h2 class="header">Frequently asked questions:</h2>
+    <h2 class="header">
+      {#if $currentLang === 'en'}Frequently asked questions:{:else}Questions fréquemment posées:{/if}
+    </h2>
     <Accordion size="xl">
       {#if $currentLang}
         {#each faqs[$currentLang] as item}

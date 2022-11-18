@@ -5,38 +5,26 @@
     HeaderNavItem,
     Dropdown,
     SkipToContent,
-    Content,
-    HeaderNavMenu
+    Content
   } from 'carbon-components-svelte'
+  import LanguageSelector from '$components/LanguageSelector.svelte'
   import { base } from '$app/paths'
-  import { page } from '$app/stores'
   import { websiteContent } from '$lib/data'
-
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
   import { setCurrency, currentListing, currentLang } from '$lib/stores'
-  import { getCurrentLang } from '$lib/utils'
 
   function setCurrencyCode(event) {
     const newIdentityId = event.detail.selectedId
     setCurrency(newIdentityId)
-  }
-
-  $: {
-    currentLang.set(getCurrentLang($page.url.pathname))
   }
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="header-wrapper">
-  <Header
-    company="Liberia"
-    platformName="MarketIndex"
-    bind:isSideNavOpen
-    href="{base}/{$currentLang}"
-  >
+  <Header company="Liberia" platformName="MarketIndex" bind:isSideNavOpen href="/">
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
@@ -54,12 +42,9 @@
     />
 
     <HeaderNav>
-      <HeaderNavItem href="{base}/faq/{$currentLang}" text="faq" />
-      <HeaderNavMenu text={$currentLang || 'en'}>
-        <HeaderNavItem href="en" text="en" />
-        <HeaderNavItem href="fr" text="fr" />
-      </HeaderNavMenu>
+      <HeaderNavItem href="{base}/faq" text="FAQ" />
     </HeaderNav>
+    <LanguageSelector />
   </Header>
 </div>
 
@@ -115,42 +100,9 @@
         margin-right: 2rem;
 
         font-size: 1.2rem;
-        :global(.bx--header__menu) {
-          width: 4rem;
 
-          color: black;
-          background: $color-background;
-          :global(.bx--header__menu-item) {
-            color: black;
-            &:hover,
-            &:focus {
-              text-decoration: underline;
-              background: $color-background;
-            }
-          }
-        }
-        :global(.bx--header__menu-title) {
-          width: 4rem;
-          background: $color-background;
-          color: black;
-        }
-        :global(.bx--header__menu-title > svg) {
-          fill: black;
-          &:hover,
-          &:focus {
-            fill: black;
-          }
-        }
-        :global(.bx--header__submenu) {
-          color: black;
-          background: $color-background;
-          &:hover,
-          &:focus {
-            color: black;
-            background: $color-background;
-          }
-        }
         :global(.bx--header__menu-item) {
+          padding: 0;
           color: black;
           &:hover {
             color: black;
