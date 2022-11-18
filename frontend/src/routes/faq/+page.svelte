@@ -22,9 +22,12 @@
   .container {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    
 
     .header {
       margin-bottom: 2rem;
+      padding: 1.5rem;
     }
 
     .content {

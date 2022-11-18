@@ -3,16 +3,16 @@ import type { FAQ } from '$lib/types'
 export const faqs: FAQ[] = [
   {
     question: 'What is Liberia Market Index?',
-    answer: `Market Index provides accurate and up-to-date information about commodiries on the Liberian market.`
+    answer: `Market Index provides accurate and up-to-date information about commodities on the Liberian market.`
   },
   {
     question: 'When is data updated?',
-    answer: 'Data is update twice a week (Mondays and Thursdays'
+    answer: 'Data is update twice a week (Mondays and Thursdays)'
   },
 
   {
     question: 'Where does the data come from?',
-    answer: 'Data are collected in real time by our agents in the market'
+    answer: 'Data is collected in real time by our agents in the market'
   },
 
   {
@@ -20,14 +20,13 @@ export const faqs: FAQ[] = [
     answer: 'The app is managed by TarjahTech'
   },
   {
-    question: 'I have a feature request , where can i submit it?',
-    answer:
-      'Proposals for additional features are welcome on our Github - https://github.com/omarudolley/pricedesk/issues'
+    question: 'I have a feature request , where can I submit it?',
+    answer: 'Proposals for additional features are welcome on our Github - https://github.com/omarudolley/pricedesk/issues'
   },
   {
     question: 'Where can I support the application?',
     answer:
-      'you can send support to any of the following accounts: Paypal: humblepleaser@icloud.com; MTN Mobile Money: 0886295272'
+      'You can send support to any of the following accounts. Paypal: humblepleaser@icloud.com; MTN Mobile Money: 0886295272'
   },
   {
     question: 'Who can I contact for more information?',
