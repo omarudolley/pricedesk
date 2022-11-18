@@ -1,7 +1,7 @@
 <script>
   import Layout from '$components/Layout.svelte'
   import SEO from '$components/SEO.svelte'
-  import Image from '$lib/assets/og.jpg'
+  import Image from '$lib/assets/og.jpeg'
 </script>
 
 <SEO
