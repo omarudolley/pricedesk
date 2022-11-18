@@ -76,8 +76,8 @@ export const commodities: {
   en: string
   fr: string
 }[] = [
-  { en: 'Corned Beef (1 can)', fr: 'Corned Beef (1 can)' },
-  { en: 'Corned Beef (carton)', fr: 'Corned Beef (carton)' },
+  { en: 'Corn Beef (1 can)', fr: 'Corned Beef (1 can)' },
+  { en: 'Corn Beef (carton)', fr: 'Corned Beef (carton)' },
   { en: 'Loaf of bread (Fula)', fr: 'Miche de pain (Fula)' },
   { en: 'Loaf of bread (Round)', fr: 'Miche de pain (Ronde)' },
   { en: 'Cement (bag)', fr: 'Ciment (sac)' },
