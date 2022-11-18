@@ -38,7 +38,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
   ],
   fr: [
     {
-      question: "Qu'est-ce que l'indice du marché libérien ?",
+      question: "Qu'est-ce que l'indice du marché Libérien ?",
       answer: `Market Index fournit des informations précises et à jour sur les produits de base sur le marché libérien.`
     },
     {
@@ -68,7 +68,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     {
       question: "Qui puis-je contacter pour plus d'informations ?",
       answer:
-        "Pour plus d'informations, contactez Siaka Joe Sirleaf. Courriel : humblepleaser@icloud.com ; WhatsApp : +8615857983179"
+        "Pour plus d'informations, contactez Siaka Joe Sirleaf. Email: humblepleaser@icloud.com ; WhatsApp : +8615857983179"
     }
   ]
 }
@@ -76,35 +76,31 @@ export const commodities: {
   en: string
   fr: string
 }[] = [
-  { en: 'Corn Beef (1 can)', fr: 'Corn Beef (1 can)' },
-  { en: 'Corn Beef (carton)', fr: 'Corn Beef (carton)' },
+  { en: 'Corned Beef (1 can)', fr: 'Corned Beef (1 can)' },
+  { en: 'Corned Beef (carton)', fr: 'Corned Beef (carton)' },
   { en: 'Loaf of bread (Fula)', fr: 'Miche de pain (Fula)' },
   { en: 'Loaf of bread (Round)', fr: 'Miche de pain (Ronde)' },
   { en: 'Cement (bag)', fr: 'Ciment (sac)' },
   { en: 'Cement (bag)', fr: 'Ciment (sac)' },
-  { en: 'Charcoal (bag)', fr: 'Charcoal (bag)' },
+  { en: 'Charcoal (bag)', fr: 'Charbone (sac)' },
   { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
   { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' },
-  { en: 'Eggs(cart)', fr: 'Eggs(cart)' },
+  { en: 'Eggs(cart)', fr: 'Oeufs(cart)' },
   { en: 'Garri (bag)', fr: 'Garri (bag)' },
-  { en: 'Fresh Milk (carton)', fr: 'Fresh Milk (carton)' },
-  { en: 'Palm oil (1.5L)', fr: 'Palm oil (1.5L)' },
-  { en: 'Palm oil (gallon)', fr: 'Palm oil (gallon)' },
+  { en: 'Fresh Milk (carton)', fr: 'Lait frais (carton)' },
+  { en: 'Palm oil (1.5L)', fr: "L'Huile de palm (1.5L)" },
+  { en: 'Palm oil (gallon)', fr: "L'Huile de palm (gallon)" },
   { en: 'Vegetable oil (1.5L)', fr: 'Huile végétale (1.5L)' },
   { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
   { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
   { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
   { en: 'Sugar (bag)', fr: 'Corn Beef (1 boîte)' },
-  { en: 'Water bottle (500ml)', fr: 'Water bottle (500ml)' },
-  { en: 'Water bottle (1.5L)', fr: 'Water bottle (1.5L)' },
-  { en: 'Water (sack)', fr: 'Water (sack)' },
-  { en: 'Crush rock (bag)', fr: 'Pierre concassée (sac)' },
-  { en: 'Steel rod (single)', fr: 'Tige en acier (simple)' },
+  { en: 'Water bottle (500ml)', fr: "Bouteille d'oeau(500ml)" },
+  { en: 'Water bottle (1.5L)', fr: "Bouteille d'oeau (1.5L)" },
+  { en: 'Water (sack)', fr: "D'oeau  (sac)" },
   { en: 'Zinc (sheet)', fr: 'Zinc (feuille)' },
-  { en: 'Oil Paint (bucket)', fr: "Peinture à l'huile (seau)" },
-  { en: 'Water Paint (bucket)', fr: "Peinture à l'eau (seau)" },
-  { en: 'White wash (bag)', fr: 'Lavage blanc (sac)' },
-  { en: 'Brick (6-inch)', fr: 'Brique (6 pouces)' }
+  { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
+  { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
 ]
 
 export const websiteContent: {
@@ -119,7 +115,7 @@ export const websiteContent: {
   },
   intro: {
     en: 'Follow the Liberian market easily in one place.',
-    fr: 'Suivez facilement le marché libérien en un seul endroit.'
+    fr: 'Suivez facilement le marché Libérien en un seul endroit.'
   },
   less: {
     en: 'show less',
