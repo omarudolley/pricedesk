@@ -103,6 +103,14 @@ export const commodities: {
   { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
 ]
 
+export const rates: {
+  en: string
+  fr: string
+}[] = [
+  { en: 'USD buying rate', fr: "USD taux d'achat" },
+  { en: 'USD selling rate', fr: 'USD taux de vente' }
+]
+
 export const websiteContent: {
   [item: string]: {
     en: string

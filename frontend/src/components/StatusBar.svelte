@@ -1,7 +1,7 @@
 <script>
   import { currentListing, currentLang } from '$lib/stores'
   import RenderStatusItem from '$components/RenderStatusItem.svelte'
-  import { commodities, websiteContent } from '$lib/data'
+  import { commodities, websiteContent, rates } from '$lib/data'
 
   import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte'
   import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte'
@@ -21,8 +21,9 @@
     {@const priceListing = Object.freeze($currentListing)}
     <div class="inner top">
       <div class="header">{websiteContent.intro[$currentLang]}</div>
-      <RenderStatusItem title={{ en: 'USD buying rate', fr: "USD taux d'achat" }} {priceListing} />
-      <RenderStatusItem title={{ en: 'USD buying rate', fr: 'USD taux de vente' }} {priceListing} />
+      {#each rates as title}
+        <RenderStatusItem {title} {priceListing} />
+      {/each}
     </div>
     <div class="underline">
       <hr />
