@@ -5,15 +5,11 @@ import pytz
 GOOGLE_DRIVE_PATH_PREFIX = "https://docs.google.com/spreadsheets/d/"
 GOOGLE_DRIVE_PATH_SUFFIX = "/export?exportFormat=csv"
 
-DUALA_LISTING_ID = "183aea1tYahSyjfz4Xhgxy03tBlRLNz20IvOlwezxOAo"
-RED_LIGHT_LISTING_ID = "1Ozxrw0kn0fvWgWyem0OAyvdmivrkzAl_s630UEbhc04"
-WATERSIDE_LISTING_ID = "1_jXGlI-T3rRH68fJ7esxO9AXOD82-PklFwcmnJpZSRA"
+LISTING_ID = "183aea1tYahSyjfz4Xhgxy03tBlRLNz20IvOlwezxOAo"
 
-RED_LIGHT_LISTING_CSV_PATH = "data/raw/redlight.csv"
-DUALA_LISTING_CSV_PATH = "data/raw/duala.csv"
-WATERSIDE_LISTING_CSV_PATH = "data/raw/waterside.csv"
 
-RAW_DATA_PATH = "data/raw"
+LISTING_CSV_PATH = "data/listing.csv"
+
 
 LIBERIA_TZ = pytz.timezone("GMT")
 
@@ -80,4 +76,26 @@ COMMODITY_LIST = [
     "Beach Sand (10 tired truck)",
     "Beach Sand (bag)",
     "Corn Beef (1 can)",
+]
+
+
+LOCATION = [
+    "Montserrado",
+    "Margibi",
+    "Nimba",
+    "River Cess",
+    "Grand Gedeh",
+    "Sinoe",
+    "River Gee",
+    "Grand Kru",
+    "Bomi",
+    "Gbapolu",
+    "Bong",
+    "Grand Bassa",
+    "Grand Cape Mount",
+    "Lofa",
+    "Maryland",
+    "Duala",
+    "Redlight",
+    "Waterside",
 ]

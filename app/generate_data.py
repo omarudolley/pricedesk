@@ -10,10 +10,9 @@ from time import time
 
 from humanize import precisedelta
 
-from app.utils import analyze_memory, save_as_json
+from app.utils import analyze_memory
 from app.utils import analyze_time
 from app.utils import logger
-from app.constants import RAW_DATA_PATH
 
 LOGGER = logger
 
