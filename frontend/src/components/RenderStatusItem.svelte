@@ -1,5 +1,5 @@
 <script>
-  import { currentLang } from '$lib/stores'
+  import { currentLang, currentCurrency } from '$lib/stores'
   export let title
   export let priceListing
 </script>
@@ -11,7 +11,7 @@
     {#if title.en.startsWith('USD')}
       <p class="item_price">{priceListing[title.en]}</p>
     {:else}
-      <p class="item_price">$ {priceListing[title.en]}</p>
+      <p class="item_price">$ {priceListing[title.en]} {$currentCurrency.name}</p>
     {/if}
     <p
       class="item_change {priceListing[`${title.en}_change`] === 0

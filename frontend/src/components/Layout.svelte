@@ -3,7 +3,6 @@
     Header,
     HeaderNav,
     HeaderNavItem,
-    Dropdown,
     SkipToContent,
     Content
   } from 'carbon-components-svelte'
@@ -15,9 +14,9 @@
   $: isWideScreen = innerWidth >= 1056
   import { setCurrency, currentListing, currentLang } from '$lib/stores'
 
-  function setCurrencyCode(event) {
-    const newIdentityId = event.detail.selectedId
-    setCurrency(newIdentityId)
+  let selected
+  $: {
+    setCurrency(selected)
   }
 </script>
 
@@ -31,15 +30,11 @@
     {#if $currentListing && typeof $currentListing !== 'undefined'}
       <p class="last-update">{websiteContent.update[$currentLang]} {$currentListing.updatedOn}</p>
     {/if}
-    <Dropdown
-      class="dropdowns"
-      selectedId="usd"
-      on:select={setCurrencyCode}
-      items={[
-        { id: 'usd', text: 'USD' },
-        { id: 'lrd', text: 'LRD' }
-      ]}
-    />
+
+    <select class="currency" bind:value={selected}>
+      <option value={'usd'}> USD </option>
+      <option value={'lrd'}> LRD </option>
+    </select>
 
     <HeaderNav>
       <HeaderNavItem href="{base}/faq" text="FAQ" />
@@ -97,12 +92,10 @@
         font-weight: 600;
         display: flex;
         margin-left: auto;
-        margin-right: 2rem;
-
         font-size: 1.2rem;
 
         :global(.bx--header__menu-item) {
-          padding: 0;
+          padding: 0.5rem;
           color: black;
           &:hover {
             color: black;
@@ -111,37 +104,11 @@
         }
 
         @include mobile {
-          margin-right: auto;
+          margin-left: 0.5rem;
           padding: 0;
           font-size: inherit;
         }
       }
-    }
-  }
-
-  :global(.dropdowns) {
-    :global(.bx--dropdown) {
-      background-color: transparent;
-      border-bottom: none;
-      height: auto;
-
-      :global(.bx--list-box__field) {
-        height: auto;
-      }
-      :global(.bx--list-box__label) {
-        color: black;
-        font-size: 1.2rem;
-        @include mobile {
-          font-size: inherit;
-        }
-      }
-      :global(.bx--list-box__menu-icon > svg) {
-        fill: black;
-      }
-    }
-
-    @include mobile {
-      margin-left: 5rem;
     }
   }
 
@@ -229,5 +196,14 @@
     left: 1.2rem;
     color: black;
     font-size: 0.6rem;
+  }
+  .currency {
+    border: none;
+
+    background: $color-background;
+
+    @include mobile {
+      margin-left: 5rem;
+    }
   }
 </style>

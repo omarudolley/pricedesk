@@ -49,7 +49,10 @@
     font-size: 1rem;
     line-height: 1;
     display: flex;
-    margin-right: 0.1rem;
+    @include mobile {
+      margin-left: auto;
+    }
+    margin-right: 1rem;
   }
 
   .language__container--left,
@@ -58,7 +61,6 @@
     float: left;
     width: $language-width;
     height: $language-height;
-    padding: 5px;
   }
 
   .language__label {
