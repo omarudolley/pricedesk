@@ -31,6 +31,7 @@
 
 <style lang="scss">
   .item {
+    margin: 0 auto;
     position: relative;
     display: grid;
     grid-template-columns: 0.5rem auto;

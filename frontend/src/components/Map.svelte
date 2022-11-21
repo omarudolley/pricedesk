@@ -1,8 +1,8 @@
 <script>
   import liberia from '$lib/data/liberia.topo.json'
   import * as Highcharts from 'highcharts'
-  import { commodities } from '$lib/data'
-  import { currentLang, currentMapData } from '$lib/stores'
+  import { commodities, rates, locations } from '$lib/data'
+  import { currentLang, currentMapData, currentCurrency } from '$lib/stores'
 
   import HighchartsMapModule from 'highcharts/modules/map'
   import drilldown from 'highcharts/modules/drilldown'
@@ -13,7 +13,8 @@
   import FaPause from 'svelte-icons/fa/FaPause.svelte'
   import { onMount } from 'svelte'
 
-  let chart
+  let mapChart
+  let lineChart
   let toPlay = true
   let selected
   export let data
@@ -23,30 +24,25 @@
   $: output = $currentMapData.dates[value]
   $: max = $currentMapData.dates.length - 1
 
-  $: {
-    console.log(chart)
-  }
-
   onMount(() => {
     HighchartsMapModule(Highcharts)
     exportModule(Highcharts)
     accessibilityModule(Highcharts)
     drilldown(Highcharts)
     dataModule(Highcharts)
-    chart = Highcharts.mapChart({
+    mapChart = Highcharts.mapChart({
       chart: {
         map: liberia,
         renderTo: 'container'
       },
       title: {
-        text: selected,
+        text: 'Select item: ',
         fontSize: 10,
-        align: 'center',
-        y: 15,
-        style: {
-          fontSize: 18
-        }
+        x: 0,
+        align: 'left',
+        y: 20
       },
+
       mapNavigation: {
         enabled: true,
         buttonOptions: {
@@ -54,24 +50,31 @@
         }
       },
       colorAxis: {
-        min: 0,
-        max: 24
+        minColor: '#FDFFDC',
+        maxColor: '#B20213'
       },
       series: [
         {
-          data: $currentMapData[selected][0].data.slice(),
+          data: $currentMapData[selected.en][0].data.slice(),
           joinBy: null,
-          name: selected,
+          name: selected.en,
 
           states: {
             hover: {
-              color: '#a4edba'
+              brightness: 0.15
             }
           },
           tooltip: {
-            pointFormat: '{point.name}<br> $ {point.value}<br>',
+            pointFormat: '{point.name}<br> {point.value}<br>',
 
             backgroundColor: '#ffffff',
+            pointFormatter: function () {
+              if (this.value === undefined) {
+                return 0
+              } else {
+                return $currentCurrency.name + ' $ ' + this.value
+              }
+            },
             style: {
               opacity: 0.95
             }
@@ -79,17 +82,56 @@
           dataLabels: {
             enabled: true,
             allowOverlap: true,
-            format: '{point.name}<br> $ {point.value}',
+            format: null,
+            formatter: function () {
+              if (this.point.value) {
+                return `${this.point.name} <br> ${$currentCurrency.name} $ ${this.point.value}`
+              } else {
+                return this.point.name
+              }
+            },
             style: {
-              fontSize: '8px'
+              fontWeight: '500',
+              fontSize: '9px',
+              color: '#000000',
+              'text-anchor': 'middle',
+              textOutline: '1px solid #ffffff80',
+              textShadow: '0px 0px 2px #ffffff8c',
+              textDecoration: 'none'
             }
           }
         }
       ]
     })
+
+    lineChart = Highcharts.chart('line', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: `${selected.en} over time `
+      },
+      xAxis: {
+        categories: $currentMapData.dates
+      },
+      yAxis: {
+        title: {
+          text: `Price in ${$currentCurrency.name}`
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      },
+      series: generateLineChartSeries()
+    })
   })
 
-  function update() {
+  function play() {
     if (value < max) {
       value++
     } else {
@@ -98,43 +140,65 @@
     updateChart()
 
     if (value >= max) {
-      clearTimeout(chart.sequenceTimer)
-      chart.sequenceTimer = undefined
+      toPlay = !toPlay
+      clearTimeout(mapChart.sequenceTimer)
+      mapChart.sequenceTimer = undefined
     }
   }
 
   function start() {
     toPlay = !toPlay
 
-    if (chart.sequenceTimer === undefined) {
-      chart.sequenceTimer = setInterval(function () {
-        update()
+    if (mapChart.sequenceTimer === undefined) {
+      mapChart.sequenceTimer = setInterval(function () {
+        play()
       }, 500)
     } else {
-      clearTimeout(chart.sequenceTimer)
-      chart.sequenceTimer = undefined
+      clearTimeout(mapChart.sequenceTimer)
+      mapChart.sequenceTimer = undefined
     }
   }
-  function onChange() {
-    updateChart()
-  }
+
   function onInput(evt) {
     value = evt.target.value
     updateChart()
   }
 
   function updateChart() {
-    if (chart) chart.series[0].setData(data[selected][value].data)
+    if (mapChart) {
+      mapChart.series[0].setData(data[selected.en][value].data)
+      mapChart.update({
+        series: [{ name: selected[$currentLang] }]
+      })
+    }
+    if (lineChart) {
+      lineChart.update({
+        series: generateLineChartSeries(),
+        yAxis: {
+          title: {
+            text: `Price in ${$currentCurrency.name}`
+          }
+        },
+        title: {
+          text: `${selected.en} over time `
+        }
+      })
+    }
   }
 
-  function onSelect() {
-    chart.update({
-      title: {
-        text: selected
-      },
-      series: [{ name: selected }]
+  function generateLineChartSeries() {
+    let items = $currentMapData[selected.en]
+    let series = []
+    locations.map((location) => {
+      let obj = {
+        name: '',
+        data: []
+      }
+      obj.name = location
+      items.map((item, index) => obj.data.push(items[index].data[locations.indexOf(location)]))
+      series.push(obj)
     })
-    updateChart()
+    return series
   }
 
   $: $currentMapData, updateChart()
@@ -158,16 +222,22 @@
       min="0"
       {max}
       on:input={onInput}
-      on:change={onChange}
+      on:change={updateChart}
     />
     <output class="play-output" for="play-range" name="year">{output}</output>
   </div>
+  <div class="select-box">
+    <select class="select" bind:value={selected} on:change={updateChart}>
+      {#each commodities as commodity}
+        <option value={commodity}>{commodity[$currentLang]}</option>
+      {/each}
+      {#each rates as rate}
+        <option value={rate}>{rate[$currentLang]}</option>
+      {/each}
+    </select>
+  </div>
 
-  <select class="select" bind:value={selected} on:change={onSelect}>
-    {#each commodities as commodity}
-      <option value={commodity['en']}>{commodity[$currentLang]}</option>
-    {/each}
-  </select>
+  <div id="line" />
 </div>
 
 <style global lang="scss">
@@ -185,7 +255,6 @@
 
   .map {
     position: relative;
-    border: 1px solid gray;
     margin-top: 5rem;
     @include mobile {
       margin-top: 3rem;
@@ -223,13 +292,21 @@
     width: 70%;
   }
 
-  .select {
+  .select-box {
     position: absolute;
     top: 0.75rem;
-    left: 0.5rem;
+    left: 8rem;
+    font-size: 1rem;
+    height: 90%;
 
     @include mobile {
-      font-size: 0.5rem;
+      left: 35%;
+    }
+    .select {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      padding: 5px;
     }
   }
 </style>

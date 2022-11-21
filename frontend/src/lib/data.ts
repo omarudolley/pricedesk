@@ -38,7 +38,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
   ],
   fr: [
     {
-      question: "Qu'est-ce que l'indice du marché Libérien ?",
+      question: "Qu'est-ce que Market Index ?",
       answer: `Market Index fournit des informations précises et à jour sur les produits de base sur le marché libérien.`
     },
     {
@@ -138,3 +138,21 @@ export const websiteContent: {
     fr: 'dernière mise à jour'
   }
 }
+
+export const locations = [
+  'Gbapolu',
+  'Bong',
+  'Grand Bassa',
+  'Grand Cape Mount',
+  'Lofa',
+  'Montserrado',
+  'Margibi',
+  'Nimba',
+  'Rivercess',
+  'Grand Gedeh',
+  'Sinoe',
+  'River Gee',
+  'Grand Kru',
+  'Maryland',
+  'Bomi'
+]

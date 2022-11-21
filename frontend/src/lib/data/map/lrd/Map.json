@@ -4,339 +4,1615 @@
   "Rice (50kg)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 6, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
 
   "Sugar (bag)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        1000,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 1, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        2000,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [1, 2, 2, 2, 6, 6, 6, 11, 11, 124, 134]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        3000,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
 
   "Corn Beef (1 can)": [
     {
       "date": "2020-11-13",
-      "data": [36, 51, 66, 85, 95, 98, 114, 117, 124, 134]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [1, 1, 1, 1, 1, 1, 1, 117, 124, 134]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [12, 95, 98, 114, 117, 124, 6, 11, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Loaf of bread (Fula)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 95, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Rice (25kg)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Vegetable oil (1.5L)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Vegetable oil (gallon)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 51, 66, 85, 95, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Water bottle (500ml)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Water bottle (1.5L)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Water (sack)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Zinc (sheet)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Oil Paint (bucket)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Loaf of bread (Round)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 1, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Water Paint (bucket)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Cement (bag)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 51, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 6, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Charcoal (bag)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 95, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 1, 12, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 6, 6, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Diesel (gallon)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 1, 95, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Gasoline (gallon)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 1, 6, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Eggs(cart)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Garri (bag)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 2, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 1, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Fresh Milk (carton)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Palm oil (1.5L)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 98, 114, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 1, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Palm oil (gallon)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 36, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
   "Corn Beef (carton)": [
     {
       "date": "2020-11-13",
-      "data": [124, 134, 95, 98, 114, 117, 124, 134, 117]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-14",
-      "data": [95, 98, 114, 117, 124, 134, 1, 6]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     },
     {
       "date": "2020-11-16",
-      "data": [11, 12, 95, 98, 114, 117, 124, 134, 11]
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    }
+  ],
+  "USD buying rate": [
+    {
+      "date": "2020-11-13",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    },
+    {
+      "date": "2020-11-14",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    },
+    {
+      "date": "2020-11-16",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    }
+  ],
+  "USD selling rate": [
+    {
+      "date": "2020-11-13",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        20,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    },
+    {
+      "date": "2020-11-14",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        40,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
+    },
+    {
+      "date": "2020-11-16",
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        60,
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ]
     }
   ],
 
