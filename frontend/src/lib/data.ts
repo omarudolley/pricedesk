@@ -94,7 +94,7 @@ export const commodities: {
   { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
   { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
   { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
-  { en: 'Sugar (bag)', fr: 'Corn Beef (1 boîte)' },
+  { en: 'Sugar (bag)', fr: 'Sucre (1 sac)' },
   { en: 'Water bottle (500ml)', fr: "Bouteille d'oeau(500ml)" },
   { en: 'Water bottle (1.5L)', fr: "Bouteille d'oeau (1.5L)" },
   { en: 'Water (sack)', fr: "D'oeau  (sac)" },

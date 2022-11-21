@@ -71,13 +71,13 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $color-background;
+    background: white;
 
     color: black;
     :global(header) {
       max-width: $container-max-width;
       margin: 0 auto;
-      background: $color-background;
+      background: white;
       color: black;
 
       :global(.bx--header__name) {
@@ -99,7 +99,7 @@
           color: black;
           &:hover {
             color: black;
-            background: $color-background;
+            background: white;
           }
         }
 
@@ -118,7 +118,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: $color-background;
+    background: white;
 
     .content-wrapper {
       display: flex;
