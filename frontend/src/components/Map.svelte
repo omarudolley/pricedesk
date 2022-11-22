@@ -206,13 +206,13 @@
 <div class="map">
   <div id="container" />
   <div class="play-controls">
-    <button class="play-pause-button" on:click={start}>
+    <div class="play-pause-button" role="button" on:click={start}>
       {#if toPlay}
         <FaPlay />
       {:else}
         <FaPause />
       {/if}
-    </button>
+    </div>
     <input
       id="play-range"
       class="play-range"
@@ -271,6 +271,10 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 5px 0 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .play-controls * {
     display: inline-block;
@@ -285,6 +289,16 @@
     border: 1px solid silver;
     border-radius: 3px;
     background: #f8f8f8;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f62fe;
+
+    svg {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
   }
   .play-range {
     margin: 2.5%;
