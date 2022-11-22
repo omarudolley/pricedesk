@@ -1,7 +1,7 @@
 <script>
   import liberia from '$lib/data/liberia.topo.json'
   import * as Highcharts from 'highcharts'
-  import { commodities, rates, locations } from '$lib/data'
+  import { commodities, rates, locations, websiteContent } from '$lib/data'
   import { currentLang, currentMapData, currentCurrency } from '$lib/stores'
 
   import HighchartsMapModule from 'highcharts/modules/map'
@@ -167,17 +167,18 @@
   function updateChart() {
     if (mapChart) {
       mapChart.series[0].setData(data[selected.en][value].data)
+      mapChart.series[0].setName(selected[$currentLang])
     }
     if (lineChart) {
       lineChart.update({
         series: generateLineChartSeries(),
         yAxis: {
           title: {
-            text: `Price in ${$currentCurrency.name}`
+            text: `${websiteContent.lineChartYaxis[$currentLang]} ${$currentCurrency.name}`
           }
         },
         title: {
-          text: `${selected.en} over time `
+          text: `${selected[$currentLang]} ${websiteContent.lineChartTitle[$currentLang]} `
         }
       })
     }
@@ -198,14 +199,8 @@
     return series
   }
 
-  function onSelect() {
-    mapChart.update({
-      series: [{ name: selected[$currentLang] }]
-    })
-    updateChart()
-  }
-
   $: $currentMapData, updateChart()
+  $: $currentLang, updateChart()
 </script>
 
 <div class="map">
@@ -231,7 +226,7 @@
     <output class="play-output" for="play-range" name="year">{output}</output>
   </div>
   <div class="select-box">
-    <select class="select" bind:value={selected} on:change={onSelect}>
+    <select class="select" bind:value={selected} on:change={updateChart}>
       {#each commodities as commodity}
         <option value={commodity}>{commodity[$currentLang]}</option>
       {/each}

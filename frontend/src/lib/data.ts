@@ -28,12 +28,11 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     {
       question: 'Where can I support the application?',
       answer:
-        'you can send support to any of the following accounts: Paypal: humblepleaser@icloud.com; MTN Mobile Money: 0886295272'
+        'you can send support to any of the following accounts: Paypal: humblepleaser@icloud.com; MTN Mobile Money: +231886295272'
     },
     {
       question: 'Who can I contact for more information?',
-      answer:
-        'For more information contact Siaka Joe Sirleaf. Email: humblepleaser@icloud.com; Whatsapp: +8615857983179'
+      answer: 'For more information contact Siaka Joe Sirleaf. Email: tarjahtech@gmail.com'
     }
   ],
   fr: [
@@ -63,12 +62,11 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     {
       question: "Où puis-je soutenir l'application ?",
       answer:
-        "vous pouvez envoyer une assistance à l'un des comptes suivants : Paypal : humblepleaser@icloud.com ; Argent mobile MTN : 0886295272"
+        "vous pouvez envoyer une assistance à l'un des comptes suivants : Paypal : humblepleaser@icloud.com ; Argent mobile MTN : +231886295272"
     },
     {
       question: "Qui puis-je contacter pour plus d'informations ?",
-      answer:
-        "Pour plus d'informations, contactez Siaka Joe Sirleaf. Email: humblepleaser@icloud.com ; WhatsApp : +8615857983179"
+      answer: "Pour plus d'informations, contactez Siaka Joe Sirleaf. Email: tarjahtech@gmail.com; "
     }
   ]
 }
@@ -136,6 +134,14 @@ export const websiteContent: {
   update: {
     en: 'last update',
     fr: 'dernière mise à jour'
+  },
+  lineChartYaxis: {
+    en: 'price in',
+    fr: 'prix en'
+  },
+  lineChartTitle: {
+    en: 'over time',
+    fr: 'sur une période de temps'
   }
 }
 
