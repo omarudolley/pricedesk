@@ -17,7 +17,7 @@ export const faqs: FAQ[] = [
 
   {
     question: 'Who manages the app?',
-    answer: 'The app is managed by TarjahTech'
+    answer: 'The app is managed by TarjahTech Inc'
   },
   {
     question: 'I have a feature request , where can I submit it?',
