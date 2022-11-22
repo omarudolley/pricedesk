@@ -200,7 +200,6 @@
   .currency {
     border: none;
     color: black;
-    background: none;
     @include mobile {
       margin-left: 5rem;
     }

@@ -306,7 +306,6 @@
       top: 0;
       padding: 5px;
       color: black;
-      background: none;
     }
   }
 </style>
