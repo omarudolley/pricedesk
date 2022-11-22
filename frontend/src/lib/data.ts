@@ -1,32 +1,34 @@
 import type { FAQ } from '$lib/types'
 
-export const faqs: FAQ[] = [
-  {
-    question: 'What is Liberia Market Index?',
-    answer: `Market Index provides accurate and up-to-date information about commodities on the Liberian market.`
-  },
-  {
-    question: 'When is data updated?',
-    answer: 'Data is update twice a week (Mondays and Thursdays)'
-  },
+export const faqs: { en: FAQ[]; fr: FAQ[] } = {
+  en: [
+    {
+      question: 'What is Liberia Market Index?',
+      answer: `Market Index provides accurate and up-to-date information about commodities on the Liberian market.`
+    },
+    {
+      question: 'When is data updated?',
+      answer: 'Data is update twice a week (Mondays and Thursdays)'
+    },
 
   {
     question: 'Where does the data come from?',
-    answer: 'Data is collected in real time by our agents in the market'
+    answer: 'Data are collected in real time by our agents in the market'
   },
 
   {
     question: 'Who manages the app?',
-    answer: 'The app is managed by TarjahTech Inc'
+    answer: 'The app is managed by TarjahTech'
   },
   {
-    question: 'I have a feature request , where can I submit it?',
-    answer: 'Proposals for additional features are welcome on our Github - https://github.com/omarudolley/pricedesk/issues'
+    question: 'I have a feature request , where can i submit it?',
+    answer:
+      'Proposals for additional features are welcome on our Github - https://github.com/omarudolley/pricedesk/issues'
   },
   {
     question: 'Where can I support the application?',
     answer:
-      'You can send support to any of the following accounts. Paypal: humblepleaser@icloud.com; MTN Mobile Money: 0886295272'
+      'you can send support to any of the following accounts: Paypal: humblepleaser@icloud.com; MTN Mobile Money: 0886295272'
   },
   {
     question: 'Who can I contact for more information?',
@@ -34,33 +36,57 @@ export const faqs: FAQ[] = [
       'For more information contact Siaka Joe Sirleaf. Email: humblepleaser@icloud.com; Whatsapp: +8615857983179'
   }
 ]
-export const commodities: string[] = [
-  'Corn Beef (1 can)',
-  'Corn Beef (carton)',
-  'Loaf of bread (Fula)',
-  'Loaf of bread (Round)',
-  'Cement (bag)',
-  'Charcoal (bag)',
-  'Diesel (gallon)',
-  'Gasoline (gallon)',
-  'Eggs(cart)',
-  'Garri (bag)',
-  'Fresh Milk (carton)',
-  'Palm oil (1.5L)',
-  'Palm oil (gallon)',
-  'Vegetable oil (1.5L)',
-  'Vegetable oil (gallon)',
-  'Rice (25kg)',
-  'Rice (50kg)',
-  'Sugar (bag)',
-  'Water bottle (500ml)',
-  'Water bottle (1.5L)',
-  'Water (sack)',
-  'Crush rock (bag)',
-  'Steel rod (single)',
-  'Zinc (sheet)',
-  'Oil Paint (bucket)',
-  'Water Paint (bucket)',
-  'White wash (bag)',
-  'Brick (6-inch)'
+
+export const websiteContent: {
+  [item: string]: {
+    en: string
+    fr: string
+  }
+} = {
+  footer: {
+    en: 'Proposals for additional features are welcome on our Github',
+    fr: 'Les propositions de fonctionnalités supplémentaires sont les bienvenues sur notre Github'
+  },
+  intro: {
+    en: 'Follow the Liberian market easily in one place.',
+    fr: 'Suivez facilement le marché Libérien en un seul endroit.'
+  },
+  less: {
+    en: 'show less',
+    fr: 'moins'
+  },
+  more: {
+    en: 'show more',
+    fr: 'plus'
+  },
+  update: {
+    en: 'last update',
+    fr: 'dernière mise à jour'
+  },
+  lineChartYaxis: {
+    en: 'price in',
+    fr: 'prix en'
+  },
+  lineChartTitle: {
+    en: 'over time',
+    fr: 'sur une période de temps'
+  }
+}
+
+export const locations = [
+  'Gbapolu',
+  'Bong',
+  'Grand Bassa',
+  'Grand Cape Mount',
+  'Lofa',
+  'Montserrado',
+  'Margibi',
+  'Nimba',
+  'Rivercess',
+  'Grand Gedeh',
+  'Sinoe',
+  'River Gee',
+  'Grand Kru',
+  'Maryland',
+  'Bomi'
 ]

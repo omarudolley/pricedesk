@@ -3,20 +3,20 @@
     Header,
     HeaderNav,
     HeaderNavItem,
-    Dropdown,
     SkipToContent,
     Content
   } from 'carbon-components-svelte'
+  import LanguageSelector from '$components/LanguageSelector.svelte'
   import { base } from '$app/paths'
-
+  import { websiteContent } from '$lib/data'
   let isSideNavOpen = false
   $: innerWidth = 0
   $: isWideScreen = innerWidth >= 1056
-  import { setCurrency, currentListing } from '$lib/stores'
+  import { setCurrency, currentListing, currentLang } from '$lib/stores'
 
-  function setCurrencyCode(event) {
-    const newIdentityId = event.detail.selectedId
-    setCurrency(newIdentityId)
+  let selected
+  $: {
+    setCurrency(selected)
   }
 </script>
 
@@ -28,20 +28,18 @@
       <SkipToContent />
     </svelte:fragment>
     {#if $currentListing && typeof $currentListing !== 'undefined'}
-      <p class="last-update">{$currentListing.updatedOn}</p>
+      <p class="last-update">{websiteContent.update[$currentLang]} {$currentListing.updatedOn}</p>
     {/if}
-    <Dropdown
-      class="dropdowns"
-      selectedId="usd"
-      on:select={setCurrencyCode}
-      items={[
-        { id: 'usd', text: 'USD' },
-        { id: 'lrd', text: 'LRD' }
-      ]}
-    />
+
+    <select class="currency" bind:value={selected}>
+      <option value={'usd'}> USD </option>
+      <option value={'lrd'}> LRD </option>
+    </select>
+
     <HeaderNav>
       <HeaderNavItem href="{base}/faq" text="FAQ" />
     </HeaderNav>
+    <LanguageSelector />
   </Header>
 </div>
 
@@ -54,7 +52,7 @@
     </Content>
   </div>
   <div class="footer">
-    Proposals for additional features are welcome on our Github —
+    {websiteContent.footer[$currentLang]} —
 
     <a href="https://github.com/omarudolley/pricedesk/issues" target="_blank">
       https://github.com/omarudolley/pricedesk/issues
@@ -73,13 +71,13 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $color-background;
+    background: white;
 
     color: black;
     :global(header) {
       max-width: $container-max-width;
       margin: 0 auto;
-      background: $color-background;
+      background: white;
       color: black;
 
       :global(.bx--header__name) {
@@ -94,49 +92,23 @@
         font-weight: 600;
         display: flex;
         margin-left: auto;
-        margin-right: 2rem;
-
         font-size: 1.2rem;
+
         :global(.bx--header__menu-item) {
+          padding: 0.5rem;
           color: black;
           &:hover {
             color: black;
-            background: $color-background;
+            background: white;
           }
         }
 
         @include mobile {
-          margin-right: auto;
+          margin-left: 0.5rem;
           padding: 0;
           font-size: inherit;
         }
       }
-    }
-  }
-
-  :global(.dropdowns) {
-    :global(.bx--dropdown) {
-      background-color: transparent;
-      border-bottom: none;
-      height: auto;
-
-      :global(.bx--list-box__field) {
-        height: auto;
-      }
-      :global(.bx--list-box__label) {
-        color: black;
-        font-size: 1.2rem;
-        @include mobile {
-          font-size: inherit;
-        }
-      }
-      :global(.bx--list-box__menu-icon > svg) {
-        fill: black;
-      }
-    }
-
-    @include mobile {
-      margin-left: 5rem;
     }
   }
 
@@ -146,11 +118,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: $color-background;
+    background: white;
 
     .content-wrapper {
       display: flex;
       min-height: 100%;
+      margin-bottom: 2rem;
     }
   }
 
@@ -210,7 +183,7 @@
     background: $color-background;
 
     margin-top: auto;
-    padding: 2rem 0;
+    padding: 2rem 0.5rem;
 
     @include mobile {
       font-size: 0.8rem;
@@ -223,9 +196,12 @@
     left: 1.2rem;
     color: black;
     font-size: 0.6rem;
-
-    &::before {
-      content: 'Last update ';
+  }
+  .currency {
+    border: none;
+    color: black;
+    @include mobile {
+      margin-left: 5rem;
     }
   }
 </style>

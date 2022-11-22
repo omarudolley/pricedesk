@@ -37,7 +37,7 @@ jobs:
         id: cache
         with:
           path: frontend/src/lib/data
-          key: ${{ hashFiles('data/*.json', 'app/*.py', 'pyproject.toml', 'poetry.lock') }}
+          key: ${{ hashFiles('data/*.csv', 'app/*.py', 'pyproject.toml', 'poetry.lock') }}
 
       - name: Commit latest data files if updated
         # If cache matched then the files have not changed
