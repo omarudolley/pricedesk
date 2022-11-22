@@ -84,19 +84,19 @@ export const commodities: {
   { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
   { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' },
   { en: 'Eggs(cart)', fr: 'Oeufs(cart)' },
-  { en: 'Garri (bag)', fr: 'Garri (bag)' },
-  { en: 'Fresh Milk (carton)', fr: 'Lait frais (carton)' },
-  { en: 'Palm oil (1.5L)', fr: "L'Huile de palm (1.5L)" },
-  { en: 'Palm oil (gallon)', fr: "L'Huile de palm (gallon)" },
+  { en: 'Garri (bag)', fr: 'Garri (sac)' },
+  { en: 'Fresh Milk (carton)', fr: 'Lait (carton)' },
+  { en: 'Palm oil (1.5L)', fr: 'Huile de palm (1.5L)' },
+  { en: 'Palm oil (gallon)', fr: 'Huile de palm (gallon)' },
   { en: 'Vegetable oil (1.5L)', fr: 'Huile végétale (1.5L)' },
   { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
   { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
   { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
   { en: 'Sugar (bag)', fr: 'Sucre (1 sac)' },
-  { en: 'Water bottle (500ml)', fr: "Bouteille d'oeau(500ml)" },
-  { en: 'Water bottle (1.5L)', fr: "Bouteille d'oeau (1.5L)" },
-  { en: 'Water (sack)', fr: "D'oeau  (sac)" },
-  { en: 'Zinc (sheet)', fr: 'Zinc (feuille)' },
+  { en: 'Water bottle (500ml)', fr: "Bouteille d'eau(500ml)" },
+  { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" },
+  { en: 'Water (sack)', fr: "Sachet d'eau" },
+  { en: 'Zinc (sheet)', fr: 'Toit en Zinc (feuille)' },
   { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
   { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
 ]
@@ -142,6 +142,10 @@ export const websiteContent: {
   lineChartTitle: {
     en: 'over time',
     fr: 'sur une période de temps'
+  },
+  select: {
+    en: 'Select item',
+    fr: 'Choisir item'
   }
 }
 

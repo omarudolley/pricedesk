@@ -36,7 +36,7 @@
         renderTo: 'container'
       },
       title: {
-        text: 'Select item: ',
+        text: websiteContent.select[$currentLang],
         fontSize: 10,
         x: 0,
         align: 'left',
@@ -168,6 +168,11 @@
     if (mapChart) {
       mapChart.series[0].setData(data[selected.en][value].data)
       mapChart.series[0].setName(selected[$currentLang])
+      mapChart.update({
+        title: {
+          text: websiteContent.select[$currentLang]
+        }
+      })
     }
     if (lineChart) {
       lineChart.update({
