@@ -199,9 +199,7 @@
   }
   .currency {
     border: none;
-
-    background: $color-background;
-
+    color: black;
     @include mobile {
       margin-left: 5rem;
     }
