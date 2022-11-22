@@ -167,9 +167,6 @@
   function updateChart() {
     if (mapChart) {
       mapChart.series[0].setData(data[selected.en][value].data)
-      mapChart.update({
-        series: [{ name: selected[$currentLang] }]
-      })
     }
     if (lineChart) {
       lineChart.update({
@@ -201,13 +198,20 @@
     return series
   }
 
+  function onSelect() {
+    mapChart.update({
+      series: [{ name: selected[$currentLang] }]
+    })
+    updateChart()
+  }
+
   $: $currentMapData, updateChart()
 </script>
 
 <div class="map">
   <div id="container" />
   <div class="play-controls">
-    <button class="play-pause-button" on:click={start} title="play">
+    <button class="play-pause-button" on:click={start}>
       {#if toPlay}
         <FaPlay />
       {:else}
@@ -227,7 +231,7 @@
     <output class="play-output" for="play-range" name="year">{output}</output>
   </div>
   <div class="select-box">
-    <select class="select" bind:value={selected} on:change={updateChart}>
+    <select class="select" bind:value={selected} on:change={onSelect}>
       {#each commodities as commodity}
         <option value={commodity}>{commodity[$currentLang]}</option>
       {/each}
@@ -297,7 +301,6 @@
     top: 0.75rem;
     left: 8rem;
     font-size: 1rem;
-    height: 90%;
 
     @include mobile {
       left: 35%;
