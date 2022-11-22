@@ -21,8 +21,10 @@
         {/each}
       {/if}
     </Accordion>
+  <div>
+        <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
+  </div>
 
-    <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
   </div>
 </div>
 
