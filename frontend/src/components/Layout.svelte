@@ -180,7 +180,7 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    background: $color-background;
+    background: $color-neutral;
 
     margin-top: auto;
     padding: 2rem 0.5rem;

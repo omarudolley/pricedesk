@@ -1,7 +1,8 @@
 <script>
   import { faqs } from '$lib/data'
   import { currentLang } from '$lib/stores'
-  import { Accordion, AccordionItem } from 'carbon-components-svelte'
+  import { Accordion, AccordionItem, Button } from 'carbon-components-svelte'
+  import ArrowLeft from 'carbon-icons-svelte/lib/ArrowLeft.svelte'
 </script>
 
 <div class="container">
@@ -20,6 +21,8 @@
         {/each}
       {/if}
     </Accordion>
+
+    <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
   </div>
 </div>
 
@@ -33,7 +36,6 @@
     }
 
     .header {
-      margin-bottom: 2rem;
       font-weight: 600;
       padding: 1rem;
 
@@ -46,6 +48,7 @@
       display: flex;
       flex-direction: column;
       max-width: $container-max-width;
+      gap: 2rem;
 
       .item {
         padding: 1.5rem;
