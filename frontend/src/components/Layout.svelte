@@ -72,6 +72,7 @@
     left: 0;
     right: 0;
     background: white;
+    font-family: Poppins, Roboto, serif;
 
     color: black;
     :global(header) {
@@ -119,6 +120,7 @@
     flex-direction: column;
     min-height: 100vh;
     background: white;
+    font-family: Poppins, Roboto, serif;
 
     .content-wrapper {
       display: flex;

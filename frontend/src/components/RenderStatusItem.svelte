@@ -27,10 +27,10 @@
         : Math.abs(priceListing[`${title.en}_change`])}
     </p>
     {#if title.en.startsWith('USD')}
-      <p class="last-recorded">last record {priceListing[`${title.en}_last_recorded`]}</p>
+      <p class="last-recorded">last week {priceListing[`${title.en}_last_recorded`]}</p>
     {:else}
       <p class="last-recorded">
-        last record $ {priceListing[`${title.en}_last_recorded`]}
+        last week $ {priceListing[`${title.en}_last_recorded`]}
       </p>
     {/if}
   </div>
@@ -98,7 +98,7 @@
       }
 
       .last-recorded {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         line-height: 1.12rem;
         max-width: 10rem;
         color: $color-black;
@@ -108,7 +108,6 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         padding-right: 2.5rem;
-        font-style: italic;
       }
 
       .positive {

@@ -2,7 +2,6 @@
   import { faqs } from '$lib/data'
   import { currentLang } from '$lib/stores'
   import { Accordion, AccordionItem, Button } from 'carbon-components-svelte'
-  import ArrowLeft from 'carbon-icons-svelte/lib/ArrowLeft.svelte'
 </script>
 
 <div class="container">
@@ -22,7 +21,7 @@
       {/if}
     </Accordion>
     <div class="button">
-      <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
+      <Button kind="secondary" href="/">Back</Button>
     </div>
   </div>
 </div>
@@ -55,6 +54,7 @@
         padding: 1.5rem;
       }
       .button {
+        margin-left: auto;
         padding: 1rem;
       }
     }
