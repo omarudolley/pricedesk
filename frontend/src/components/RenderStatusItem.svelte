@@ -99,7 +99,7 @@
 
       .last-recorded {
         font-size: 0.6rem;
-        line-height: 1.12rem;
+        line-height: 0.8rem;
         max-width: 10rem;
         color: $color-black;
         margin: 0;

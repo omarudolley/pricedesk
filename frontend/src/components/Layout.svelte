@@ -72,7 +72,6 @@
     left: 0;
     right: 0;
     background: white;
-    font-family: Poppins, Roboto, serif;
 
     color: black;
     :global(header) {

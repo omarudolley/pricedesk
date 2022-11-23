@@ -74,6 +74,9 @@
       justify-items: left;
       padding: 1.875rem;
       grid-auto-rows: 1fr;
+      @include mobile {
+        grid-auto-rows: auto;
+      }
     }
     .top {
       padding-bottom: 0.2rem;
