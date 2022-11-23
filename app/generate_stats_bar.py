@@ -33,8 +33,6 @@ def main():
     final_usd_data = {"updatedOn": TODAY_DMYHM}
     final_ld_data = {"updatedOn": TODAY_DMYHM}
 
-    print(mean_df_lrd)
-
     for item in COMMODITY_LIST:
         final_ld_data[f"{item}_change"] = round(np.diff(mean_df_lrd[item])[-1], 2)
         final_usd_data[f"{item}_change"] = round(np.diff(mean_df_usd[item])[-1], 2)

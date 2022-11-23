@@ -20,6 +20,9 @@ YESTERDAY_YMD = datetime.strftime(datetime.today() - timedelta(1), "%Y-%m-%d")
 STATS_BAR_LRD_PATH = "frontend/src/lib/data/stats/lrd/StatsBar.json"
 STATS_BAR_USD_PATH = "frontend/src/lib/data/stats/usd/StatsBar.json"
 
+MAP_DATA_LRD_PATH = "frontend/src/lib/data/map/lrd/Map.json"
+MAP_DATA_USD_PATH = "frontend/src/lib/data/map/usd/Map.json"
+
 COMMODITY_LIST = [
     "USD buying rate",
     "USD selling rate",

@@ -21,10 +21,9 @@
         {/each}
       {/if}
     </Accordion>
-  <div>
-        <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
-  </div>
-
+    <div class="button">
+      <Button kind="secondary" icon={ArrowLeft} tooltipPosition="right" href="/">Back</Button>
+    </div>
   </div>
 </div>
 
@@ -54,6 +53,9 @@
 
       .item {
         padding: 1.5rem;
+      }
+      .button {
+        padding: 1rem;
       }
     }
   }
