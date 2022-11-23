@@ -36,6 +36,8 @@ def main():
     for item in COMMODITY_LIST:
         final_ld_data[f"{item}_change"] = round(np.diff(mean_df_lrd[item])[-1], 2)
         final_usd_data[f"{item}_change"] = round(np.diff(mean_df_usd[item])[-1], 2)
+        final_ld_data[f"{item}_last_recorded"] = mean_df_lrd[item][-2]
+        final_usd_data[f"{item}_last_recorded"] = mean_df_usd[item][-2]
 
     final_usd_data.update(mean_df_usd.iloc[-1])
     final_ld_data.update(mean_df_lrd.iloc[-1])

@@ -26,6 +26,13 @@
         ? priceListing[`${title.en}_change`]
         : Math.abs(priceListing[`${title.en}_change`])}
     </p>
+    {#if title.en.startsWith('USD')}
+      <p class="last-recorded">last record {priceListing[`${title.en}_last_recorded`]}</p>
+    {:else}
+      <p class="last-recorded">
+        last record $ {priceListing[`${title.en}_last_recorded`]}
+      </p>
+    {/if}
   </div>
 </div>
 
@@ -50,7 +57,6 @@
       gap: 8px;
 
       .item-heading {
-        font-style: normal;
         font-size: 1rem;
         line-height: 1.12rem;
         max-width: 10rem;
@@ -64,7 +70,6 @@
       }
 
       .item_price {
-        font-style: normal;
         font-size: 1.5rem;
         line-height: 1.2rem;
         color: $color-black;
@@ -77,8 +82,6 @@
       }
 
       .item_change {
-        font-style: normal;
-        font-weight: normal;
         font-size: 0.8rem;
         line-height: 130%;
         position: absolute;
@@ -92,6 +95,20 @@
         padding-top: 2px;
         top: 0.625rem;
         right: 0.625rem;
+      }
+
+      .last-recorded {
+        font-size: 0.8rem;
+        line-height: 1.12rem;
+        max-width: 10rem;
+        color: $color-black;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-right: 2.5rem;
+        font-style: italic;
       }
 
       .positive {

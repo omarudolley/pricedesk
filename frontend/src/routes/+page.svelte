@@ -1,6 +1,7 @@
 <script>
   import StatusBar from '$components/StatusBar.svelte'
   import Map from '$components/Map.svelte'
+
   import { currentMapData } from '$lib/stores'
 </script>
 

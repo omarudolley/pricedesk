@@ -3,6 +3,7 @@
   import * as Highcharts from 'highcharts'
   import { commodities, rates, locations, websiteContent } from '$lib/data'
   import { currentLang, currentMapData, currentCurrency } from '$lib/stores'
+  import InflationChart from '$components/InflationChart.svelte'
 
   import HighchartsMapModule from 'highcharts/modules/map'
   import drilldown from 'highcharts/modules/drilldown'
@@ -242,6 +243,7 @@
   </div>
 
   <div id="line" />
+  <InflationChart />
 </div>
 
 <style global lang="scss">

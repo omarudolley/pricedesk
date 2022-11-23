@@ -61,8 +61,8 @@ def main():
             }
         )
 
-        save_as_json(MAP_DATA_USD_PATH, final_usd_data)
-        save_as_json(MAP_DATA_LRD_PATH, final_ld_data)
+    save_as_json(MAP_DATA_USD_PATH, final_usd_data)
+    save_as_json(MAP_DATA_LRD_PATH, final_ld_data)
 
 
 if __name__ == "__main__":
