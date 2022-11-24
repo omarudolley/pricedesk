@@ -1,30 +1,33 @@
 <script>
   import data from '$lib/data/inflation/data.json'
   import * as Highcharts from 'highcharts'
+  import { websiteContent } from '$lib/data'
+  import { currentLang } from '$lib/stores'
 
   import dataModule from 'highcharts/modules/data'
   import exportModule from 'highcharts/modules/exporting'
   import accessibilityModule from 'highcharts/modules/accessibility'
   import { onMount } from 'svelte'
+  let inflationChart
 
   onMount(() => {
     exportModule(Highcharts)
     accessibilityModule(Highcharts)
     dataModule(Highcharts)
 
-    Highcharts.chart('inflation-line', {
+    inflationChart = Highcharts.chart('inflation-line', {
       chart: {
         type: 'line'
       },
       title: {
-        text: 'Inflation rate'
+        text: websiteContent.inflationRate[$currentLang]
       },
       xAxis: {
         categories: data.dates
       },
       yAxis: {
         title: {
-          text: 'Rate'
+          text: websiteContent.rate[$currentLang]
         }
       },
       plotOptions: {
@@ -43,6 +46,23 @@
       ]
     })
   })
+
+  function update() {
+    if (inflationChart) {
+      inflationChart.update({
+        yAxis: {
+          title: {
+            text: websiteContent.rate[$currentLang]
+          }
+        },
+        title: {
+          text: websiteContent.inflationRate[$currentLang]
+        }
+      })
+    }
+  }
+
+  $: $currentLang, update()
 </script>
 
 <div class="inflation-line" id="inflation-line" />

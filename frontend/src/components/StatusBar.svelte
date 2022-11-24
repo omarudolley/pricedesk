@@ -6,14 +6,20 @@
   import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte'
   import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte'
 
-  let miniList = commodities.slice(1, 13)
+  let sortedCommodities = commodities.sort((a, b) => a[$currentLang].localeCompare(b[$currentLang]))
+
+  $: miniList = sortedCommodities.slice(0, 13)
   $: listingToRender = miniList
   let toggleDownArrow
 
   function showOrHideMore() {
-    listingToRender = toggleDownArrow ? miniList : commodities
+    listingToRender = toggleDownArrow ? miniList : sortedCommodities
     toggleDownArrow = !toggleDownArrow
   }
+  $: $currentLang,
+    (sortedCommodities = sortedCommodities.sort((a, b) =>
+      a[$currentLang].localeCompare(b[$currentLang])
+    ))
 </script>
 
 <div class="wrapper">

@@ -1,5 +1,6 @@
 <script>
   import { currentLang, currentCurrency } from '$lib/stores'
+  import { websiteContent } from '$lib/data'
   export let title
   export let priceListing
 </script>
@@ -27,10 +28,15 @@
         : Math.abs(priceListing[`${title.en}_change`])}
     </p>
     {#if title.en.startsWith('USD')}
-      <p class="last-recorded">last week {priceListing[`${title.en}_last_recorded`]}</p>
+      <p class="last-recorded">
+        {websiteContent.lastRecordedRate[$currentLang]}
+        {priceListing[`${title.en}_last_recorded`]}
+      </p>
     {:else}
       <p class="last-recorded">
-        last week $ {priceListing[`${title.en}_last_recorded`]}
+        {websiteContent.lastRecordedPrice[$currentLang]} $ {priceListing[
+          `${title.en}_last_recorded`
+        ]}
       </p>
     {/if}
   </div>
@@ -58,7 +64,7 @@
 
       .item-heading {
         font-size: 1rem;
-        line-height: 1.12rem;
+        line-height: 1.2rem;
         max-width: 10rem;
         color: $color-black;
         margin: 0;

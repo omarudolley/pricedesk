@@ -6,7 +6,7 @@
   import InflationChart from '$components/InflationChart.svelte'
 
   import HighchartsMapModule from 'highcharts/modules/map'
-  import drilldown from 'highcharts/modules/drilldown'
+
   import dataModule from 'highcharts/modules/data'
   import exportModule from 'highcharts/modules/exporting'
   import accessibilityModule from 'highcharts/modules/accessibility'
@@ -29,7 +29,7 @@
     HighchartsMapModule(Highcharts)
     exportModule(Highcharts)
     accessibilityModule(Highcharts)
-    drilldown(Highcharts)
+
     dataModule(Highcharts)
     mapChart = Highcharts.mapChart({
       chart: {

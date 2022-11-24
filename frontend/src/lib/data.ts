@@ -74,29 +74,34 @@ export const commodities: {
   en: string
   fr: string
 }[] = [
-  { en: 'Corn Beef (1 can)', fr: 'Corned Beef (1 boîte)' },
-  { en: 'Corn Beef (carton)', fr: 'Corned Beef (carton)' },
+  { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
+  { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
+  { en: 'Water bottle (500ml)', fr: "Bouteille d'eau(500ml)" },
+  { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" },
   { en: 'Loaf of bread (Fula)', fr: 'Miche de pain (Fula)' },
   { en: 'Loaf of bread (Round)', fr: 'Miche de pain (Ronde)' },
-  { en: 'Cement (bag)', fr: 'Ciment (sac)' },
-  { en: 'Cement (bag)', fr: 'Ciment (sac)' },
   { en: 'Charcoal (bag)', fr: 'Charbon (sac)' },
+  { en: 'Onions(bag)', fr: 'Oignons (sac)' },
   { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
+  { en: 'Beef(Ibs)', fr: 'Boeuf (Ibs)' },
   { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' },
   { en: 'Eggs(cart)', fr: 'Oeufs(caisse)' },
   { en: 'Garri (bag)', fr: 'Garri (sac)' },
-  { en: 'Fresh Milk (carton)', fr: 'Lait (carton)' },
+  { en: 'Milk (carton)', fr: 'Lait (carton)' },
   { en: 'Palm oil (1.5L)', fr: 'Huile de palme (1.5L)' },
   { en: 'Palm oil (gallon)', fr: 'Huile de palme (gallon)' },
   { en: 'Vegetable oil (1.5L)', fr: 'Huile végétale (1.5L)' },
   { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
-  { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
-  { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
+  { en: 'Cement (bag)', fr: 'Ciment (sac)' },
+  { en: 'Cement (bag)', fr: 'Ciment (sac)' },
+  { en: 'Cube Magi(pk)', fr: 'Cube Magi(pk)' },
+  { en: 'Corned Beef (1 can)', fr: 'Corned Beef (1 boîte)' },
+  { en: 'Corned Beef (carton)', fr: 'Corned Beef (carton)' },
+
   { en: 'Sugar (bag)', fr: 'Sucre (1 sac)' },
-  { en: 'Water bottle (500ml)', fr: "Bouteille d'eau(500ml)" },
-  { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" },
+
   { en: 'Water (sack)', fr: "Sachet d'eau" },
-  { en: 'Zinc (sheet)', fr: 'Toiture en Zinc' },
+  { en: 'Roofing Zinc (sheet)', fr: 'Toiture en Zinc' },
   { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
   { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
 ]
@@ -146,6 +151,22 @@ export const websiteContent: {
   select: {
     en: 'Select item',
     fr: 'Choisissez'
+  },
+  lastRecordedPrice: {
+    en: 'last recorded',
+    fr: 'dernier enregistré'
+  },
+  lastRecordedRate: {
+    en: 'last recorded',
+    fr: 'dernier enregistré'
+  },
+  inflationRate: {
+    en: 'Inflation rate',
+    fr: "taux d'inflation"
+  },
+  rate: {
+    en: 'Rate',
+    fr: 'Taux'
   }
 }
 
