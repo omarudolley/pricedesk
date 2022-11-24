@@ -20,18 +20,25 @@
     <meta name="viewport" content="width=device-width" />
     %sveltekit.head%
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFN54FW6DH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-JFN54FW6DH')
-  </script>
   <body>
     <div>%sveltekit.body%</div>
   </body>
+  <script type="text/javascript">
+    var _paq = _paq || []
+    _paq.push(['trackPageView'])
+    _paq.push(['enableLinkTracking'])
+    ;(function () {
+      var u = 'https://libmarketindex.piwik.pro /'
+      _paq.push(['setTrackerUrl', u + 'ppms.php'])
+      _paq.push(['setSiteId', 'c3d9c789-89a3-423e-ab4c-fbe138fae9d6'])
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0]
+      g.type = 'text/javascript'
+      g.async = true
+      g.defer = true
+      g.src = u + 'ppms.js'
+      s.parentNode.insertBefore(g, s)
+    })()
+  </script>
 </html>
