@@ -70,5 +70,8 @@
 <style lang="scss">
   .inflation-line {
     margin-top: 2rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
   }
 </style>

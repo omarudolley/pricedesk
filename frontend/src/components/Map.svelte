@@ -104,32 +104,6 @@
         }
       ]
     })
-
-    lineChart = Highcharts.chart('line', {
-      chart: {
-        type: 'line'
-      },
-      title: {
-        text: `${selected.en} over time `
-      },
-      xAxis: {
-        categories: $currentMapData.dates
-      },
-      yAxis: {
-        title: {
-          text: `Price in ${$currentCurrency.name}`
-        }
-      },
-      plotOptions: {
-        line: {
-          dataLabels: {
-            enabled: true
-          },
-          enableMouseTracking: false
-        }
-      },
-      series: generateLineChartSeries()
-    })
   })
 
   function play() {
@@ -241,9 +215,6 @@
       {/each}
     </select>
   </div>
-
-  <div id="line" />
-  <InflationChart />
 </div>
 
 <style global lang="scss">
@@ -261,9 +232,13 @@
 
   .map {
     position: relative;
-    margin-top: 5rem;
+    margin: 2rem 0;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
     @include mobile {
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
   }
 

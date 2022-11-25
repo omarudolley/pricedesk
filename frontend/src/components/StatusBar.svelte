@@ -3,19 +3,10 @@
   import RenderStatusItem from '$components/RenderStatusItem.svelte'
   import { commodities, websiteContent, rates } from '$lib/data'
 
-  import MdKeyboardArrowDown from 'svelte-icons/md/MdKeyboardArrowDown.svelte'
-  import MdKeyboardArrowUp from 'svelte-icons/md/MdKeyboardArrowUp.svelte'
+  export let setModal
 
   let sortedCommodities = commodities.sort((a, b) => a[$currentLang].localeCompare(b[$currentLang]))
 
-  $: miniList = sortedCommodities.slice(0, 16)
-  $: listingToRender = miniList
-  let toggleDownArrow
-
-  function showOrHideMore() {
-    listingToRender = toggleDownArrow ? miniList : sortedCommodities
-    toggleDownArrow = !toggleDownArrow
-  }
   $: $currentLang,
     (sortedCommodities = sortedCommodities.sort((a, b) =>
       a[$currentLang].localeCompare(b[$currentLang])
@@ -28,7 +19,7 @@
     <div class="inner top">
       <div class="header">{websiteContent.intro[$currentLang]}</div>
       {#each rates as title}
-        <RenderStatusItem {title} {priceListing} />
+        <RenderStatusItem {title} {priceListing} {setModal} />
       {/each}
     </div>
     <div class="underline">
@@ -36,27 +27,23 @@
     </div>
 
     <div class="inner bottom">
-      {#each listingToRender as title}
-        <RenderStatusItem {title} {priceListing} />
+      {#each sortedCommodities as title}
+        <RenderStatusItem {title} {priceListing} {setModal} />
       {/each}
     </div>
   {/if}
-  <div class="arrow" on:click={showOrHideMore}>
-    {#if toggleDownArrow}
-      <MdKeyboardArrowUp />
-      <p>{websiteContent.less[$currentLang]}</p>
-    {:else}
-      <MdKeyboardArrowDown />
-      <p>{websiteContent.more[$currentLang]}</p>
-    {/if}
-  </div>
 </div>
 
 <style lang="scss">
   .wrapper {
-    background: #8fc2ff;
-    border-radius: 1.25rem;
     position: relative;
+    max-height: 39rem;
+    overflow-y: scroll;
+    background: #8fc2ff;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 
     .header {
       width: 100%;
@@ -76,10 +63,11 @@
       margin: 0 auto;
       grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
       justify-self: stretch;
-      gap: 0.5rem;
+      gap: 1rem;
       justify-items: left;
       padding: 1.875rem;
       grid-auto-rows: 1fr;
+
       @include mobile {
         grid-auto-rows: auto;
       }

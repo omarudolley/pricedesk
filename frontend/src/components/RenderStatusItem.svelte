@@ -3,9 +3,10 @@
   import { websiteContent } from '$lib/data'
   export let title
   export let priceListing
+  export let setModal
 </script>
 
-<div class="item">
+<div class="item" on:click={setModal(title)}>
   <div class="item_icon" />
   <div class="item_info">
     <p class="item-heading">{title[$currentLang]}</p>
@@ -57,6 +58,11 @@
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
     background: $color-background;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
+      transform: scale(1.05);
+    }
 
     .item_info {
       display: grid;
