@@ -8,7 +8,7 @@
 
   let sortedCommodities = commodities.sort((a, b) => a[$currentLang].localeCompare(b[$currentLang]))
 
-  $: miniList = sortedCommodities.slice(0, 13)
+  $: miniList = sortedCommodities.slice(0, 16)
   $: listingToRender = miniList
   let toggleDownArrow
 
