@@ -34,7 +34,7 @@
       </p>
     {:else}
       <p class="last-recorded">
-        {websiteContent.lastRecordedPrice[$currentLang]} $ {priceListing[
+        {websiteContent.lastRecordedPrice[$currentLang]} ${priceListing[
           `${title.en}_last_recorded`
         ]}
       </p>
