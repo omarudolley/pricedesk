@@ -8,7 +8,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     },
     {
       question: 'When is data updated?',
-      answer: 'Data is update twice a week (Mondays and Thursdays)'
+      answer: 'Data is updated every Monday morning'
     },
 
     {
@@ -42,7 +42,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     },
     {
       question: 'Quand les données sont-elles mises à jour ?',
-      answer: 'Les données sont mises à jour deux fois par semaine (Lundi et Jeudi)'
+      answer: 'Les données sont mises à jour tous les lundis matin'
     },
 
     {
@@ -153,12 +153,12 @@ export const websiteContent: {
     fr: 'Choisissez'
   },
   lastRecordedPrice: {
-    en: 'last recorded',
-    fr: 'dernier enregistré'
+    en: 'last week price',
+    fr: 'semaine dernière prix'
   },
   lastRecordedRate: {
-    en: 'last recorded',
-    fr: 'dernier enregistré'
+    en: 'last week rate',
+    fr: 'semaine dernière taux'
   },
   inflationRate: {
     en: 'Inflation rate',
