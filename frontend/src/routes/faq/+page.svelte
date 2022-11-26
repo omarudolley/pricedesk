@@ -14,7 +14,7 @@
         {#each faqs[$currentLang] as item}
           <AccordionItem title={item.question}>
             <p>
-              {item.answer}
+              {@html item.answer}
             </p>
           </AccordionItem>
         {/each}
@@ -57,6 +57,10 @@
         margin-left: auto;
         padding: 1rem;
       }
+    }
+
+    :global(.bx--btn) {
+      background: #0f62fe;
     }
   }
 </style>

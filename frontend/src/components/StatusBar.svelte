@@ -35,7 +35,7 @@
 <style lang="scss">
   .wrapper {
     position: relative;
-    background: #659dbd;
+    background: $color-primary;
     margin-bottom: 2rem;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
     border-radius: 0.5rem;

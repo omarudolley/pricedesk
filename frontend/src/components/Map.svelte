@@ -1,9 +1,8 @@
 <script>
   import liberia from '$lib/data/liberia.topo.json'
   import * as Highcharts from 'highcharts'
-  import { commodities, rates, locations, websiteContent } from '$lib/data'
+  import { commodities, rates, websiteContent } from '$lib/data'
   import { currentLang, currentMapData, currentCurrency } from '$lib/stores'
-  import InflationChart from '$components/InflationChart.svelte'
 
   import HighchartsMapModule from 'highcharts/modules/map'
 
@@ -15,7 +14,6 @@
   import { onMount } from 'svelte'
 
   let mapChart
-  let lineChart
   let toPlay = true
   let selected
   export let data
@@ -73,7 +71,7 @@
               if (this.value === undefined) {
                 return 0
               } else {
-                return $currentCurrency.name + ' $ ' + this.value
+                return this.name + '<br>' + $currentCurrency.name + '$' + this.value
               }
             },
             style: {
@@ -83,22 +81,15 @@
           dataLabels: {
             enabled: true,
             allowOverlap: true,
-            format: null,
             formatter: function () {
               if (this.point.value) {
-                return `${this.point.name} <br> ${$currentCurrency.name} $ ${this.point.value}`
+                return `$${this.point.value}`
               } else {
-                return this.point.name
+                return 'no data'
               }
             },
             style: {
-              fontWeight: '500',
-              fontSize: '9px',
-              color: '#000000',
-              'text-anchor': 'middle',
-              textOutline: '1px solid #ffffff80',
-              textShadow: '0px 0px 2px #ffffff8c',
-              textDecoration: 'none'
+              fontSize: '10px'
             }
           }
         }
@@ -149,34 +140,6 @@
         }
       })
     }
-    if (lineChart) {
-      lineChart.update({
-        series: generateLineChartSeries(),
-        yAxis: {
-          title: {
-            text: `${websiteContent.lineChartYaxis[$currentLang]} ${$currentCurrency.name}`
-          }
-        },
-        title: {
-          text: `${selected[$currentLang]} ${websiteContent.lineChartTitle[$currentLang]} `
-        }
-      })
-    }
-  }
-
-  function generateLineChartSeries() {
-    let items = $currentMapData[selected.en]
-    let series = []
-    locations.map((location) => {
-      let obj = {
-        name: '',
-        data: []
-      }
-      obj.name = location
-      items.map((item, index) => obj.data.push(items[index].data[locations.indexOf(location)]))
-      series.push(obj)
-    })
-    return series
   }
 
   $: $currentMapData, updateChart()
