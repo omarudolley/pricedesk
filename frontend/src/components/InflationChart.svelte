@@ -7,6 +7,7 @@
   import dataModule from 'highcharts/modules/data'
   import exportModule from 'highcharts/modules/exporting'
   import accessibilityModule from 'highcharts/modules/accessibility'
+  import HighchartsMapModule from 'highcharts/modules/map'
   import { onMount } from 'svelte'
   let inflationChart
 
@@ -14,6 +15,7 @@
     exportModule(Highcharts)
     accessibilityModule(Highcharts)
     dataModule(Highcharts)
+    HighchartsMapModule(Highcharts)
 
     inflationChart = Highcharts.chart('inflation-line', {
       chart: {
