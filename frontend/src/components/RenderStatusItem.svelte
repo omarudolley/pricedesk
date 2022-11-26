@@ -51,12 +51,12 @@
     grid-template-columns: 0.5rem auto;
     gap: 0.625rem;
     width: 100%;
-    min-width: 13.75rem;
-    max-width: 20rem;
+    min-width: 6rem;
+    max-width: 16rem;
     padding: 0.625rem;
     border-radius: 0.625rem;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-    background: $color-background;
+    background: white;
     cursor: pointer;
 
     &:hover {

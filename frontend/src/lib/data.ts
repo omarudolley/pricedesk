@@ -106,6 +106,49 @@ export const commodities: {
   { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
 ]
 
+export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
+  Fuel: [
+    { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
+    { en: 'Charcoal (bag)', fr: 'Charbon (sac)' },
+    { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' }
+  ],
+  Food: [
+    { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
+    { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
+
+    { en: 'Loaf of bread (Fula)', fr: 'Miche de pain (Fula)' },
+    { en: 'Loaf of bread (Round)', fr: 'Miche de pain (Ronde)' },
+
+    { en: 'Onions(bag)', fr: 'Oignons (sac)' },
+    { en: 'Beef(Ibs)', fr: 'Boeuf (Ibs)' },
+    { en: 'Eggs(cart)', fr: 'Oeufs(caisse)' },
+    { en: 'Garri (bag)', fr: 'Garri (sac)' },
+    { en: 'Milk (carton)', fr: 'Lait (carton)' },
+    { en: 'Palm oil (1.5L)', fr: 'Huile de palme (1.5L)' },
+    { en: 'Palm oil (gallon)', fr: 'Huile de palme (gallon)' },
+    { en: 'Vegetable oil (1.5L)', fr: 'Huile végétale (1.5L)' },
+    { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
+
+    { en: 'Cube Magi(pk)', fr: 'Cube Magi(pk)' },
+    { en: 'Corned Beef (1 can)', fr: 'Corned Beef (1 boîte)' },
+    { en: 'Corned Beef (carton)', fr: 'Corned Beef (carton)' },
+
+    { en: 'Sugar (bag)', fr: 'Sucre (1 sac)' }
+  ],
+
+  Beverages: [
+    { en: 'Water (sack)', fr: "Sachet d'eau" },
+    { en: 'Water bottle (500ml)', fr: "Bouteille d'eau(500ml)" },
+    { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" }
+  ],
+  Construction: [
+    { en: 'Roofing Zinc (sheet)', fr: 'Toiture en Zinc' },
+    { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
+    { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' },
+    { en: 'Cement (bag)', fr: 'Ciment (sac)' }
+  ]
+}
+
 export const rates: {
   en: string
   fr: string
