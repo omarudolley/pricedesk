@@ -51,8 +51,8 @@
     grid-template-columns: 0.5rem auto;
     gap: 0.625rem;
     width: 100%;
-    min-width: 6rem;
-    max-width: 16rem;
+    min-width: 12rem;
+    max-width: 20rem;
     padding: 0.625rem;
     border-radius: 0.625rem;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
