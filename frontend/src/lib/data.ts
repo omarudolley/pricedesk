@@ -69,7 +69,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
       question: "Où puis-je soutenir l'application ?",
       answer:
         "vous pouvez envoyer une assistance à l'un des comptes suivants :  " +
-        'Orange Mobile Money <a href="tel:+231-777-298-772">+231-777-298-772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
+        'Orange Mobile Money <a href="tel:+231777298772">+231-777-298-772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
     },
     {
       question: "Qui puis-je contacter pour plus d'informations ?",
@@ -96,6 +96,7 @@ export const commodities: {
   { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' },
   { en: 'Eggs(cart)', fr: 'Oeufs(caisse)' },
   { en: 'Garri (bag)', fr: 'Garri (sac)' },
+  { en: 'Garri (cup)', fr: 'Garri (coupe)' },
   { en: 'Milk (carton)', fr: 'Lait (carton)' },
   { en: 'Palm oil (1.5L)', fr: 'Huile de palme (1.5L)' },
   { en: 'Palm oil (gallon)', fr: 'Huile de palme (gallon)' },
@@ -110,9 +111,17 @@ export const commodities: {
   { en: 'Sugar (bag)', fr: 'Sucre (1 sac)' },
 
   { en: 'Water (sack)', fr: "Sachet d'eau" },
-  { en: 'Roofing Zinc (sheet)', fr: 'Toiture en Zinc' },
-  { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
-  { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' }
+  { en: 'Flour(bag)', fr: 'Farine (sac)' },
+
+  { en: 'Brick (4-inch)', fr: 'Brique (4 pouces)' },
+  { en: 'Brick (6-inch)', fr: 'Brique (6 pouces)' },
+  { en: 'Brick (8-inch)', fr: 'Brique (8 pouces)' },
+
+  { en: 'Roofing nail (box)', fr: 'Clou à toiture (boîte' },
+  { en: 'Plank (2" by 2")', fr: 'Planche (2" par 2")' },
+  { en: 'Plank (2" by 4")', fr: 'Planche (2" par 4")' },
+
+  { en: 'Round pole (single)', fr: 'Poteau rond (simple)' }
 ]
 
 export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
@@ -137,6 +146,7 @@ export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
     { en: 'Palm oil (gallon)', fr: 'Huile de palme (gallon)' },
     { en: 'Vegetable oil (1.5L)', fr: 'Huile végétale (1.5L)' },
     { en: 'Vegetable oil (gallon)', fr: 'Huile végétale (gallon)' },
+    { en: 'Flour(bag)', fr: 'Farine (sac)' },
 
     { en: 'Cube Magi(pk)', fr: 'Cube Magi(pk)' },
     { en: 'Corned Beef (1 can)', fr: 'Corned Beef (1 boîte)' },
@@ -151,10 +161,16 @@ export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
     { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" }
   ],
   Construction: [
-    { en: 'Roofing Zinc (sheet)', fr: 'Toiture en Zinc' },
-    { en: 'Oil Paint (bucket)', fr: 'Peinture à huile (seau)' },
-    { en: 'Water Paint (bucket)', fr: 'Peinture à eau (seau)' },
-    { en: 'Cement (bag)', fr: 'Ciment (sac)' }
+    { en: 'Cement (bag)', fr: 'Ciment (sac)' },
+    { en: 'Brick (4-inch)', fr: 'Brique (4 pouces)' },
+    { en: 'Brick (6-inch)', fr: 'Brique (6 pouces)' },
+    { en: 'Brick (8-inch)', fr: 'Brique (8 pouces)' },
+
+    { en: 'Roofing nail (box)', fr: 'Clou à toiture (boîte' },
+    { en: 'Plank (2" by 2")', fr: 'Planche (2" par 2")' },
+    { en: 'Plank (2" by 4")', fr: 'Planche (2" par 4")' },
+
+    { en: 'Round pole (single)', fr: 'Poteau rond (simple)' }
   ]
 }
 

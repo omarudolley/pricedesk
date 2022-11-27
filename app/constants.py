@@ -59,9 +59,7 @@ COMMODITY_LIST = [
     "Water bottle (500ml)",
     "Water bottle (1.5L)",
     "Water (sack)",
-    "Sausage (Pack)",
-    "Sausage (carton)",
-    "Crush rock (bag)",
+    "Crush rock (blade)",
     "Steel rod (single)",
     "Roofing Zinc (sheet)",
     "Roofing Zinc (bundle)",
@@ -78,13 +76,12 @@ COMMODITY_LIST = [
     'Plank (2" by 4")',
     'Plank (2" by 6")',
     "Round pole (single)",
-    "Beach Sand (10 tired truck)",
-    "Beach Sand (bag)",
+    "Beach Sand (blade)",
     "Corned Beef (1 can)",
     "Beef(Ibs)",
     "Onions(bag)",
     "Cube Magi(pk)",
-    "Flour(pk)",
+    "Flour(bag)",
 ]
 
 
