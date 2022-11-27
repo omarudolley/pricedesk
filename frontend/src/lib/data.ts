@@ -30,12 +30,12 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
       question: 'Where can I support the application?',
       answer:
         'you can send support to any of the following accounts: ' +
-        'Orange Mobile Money <a href="tel:+231-777-298-772">+231-777-298-772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
+        'Orange Mobile Money <a href="tel:+231-777-298-772">+231777298772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
     },
     {
       question: 'Who can I contact for more information?',
       answer:
-        'For more information contact Siaka Joe Sirleaf.' +
+        'For more information contact us at' +
         ' <a href="mailto:tarjahtech@gmail.com">tarjahtech@gmail.com</a>'
     }
   ],
@@ -69,12 +69,12 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
       question: "Où puis-je soutenir l'application ?",
       answer:
         "vous pouvez envoyer une assistance à l'un des comptes suivants :  " +
-        'Orange Mobile Money <a href="tel:+231777298772">+231-777-298-772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
+        'Orange Mobile Money <a href="tel:+231777298772">+231777298772</a>  MTN Mobile Money:  <a href="tel:+231886295272">+231886295272</a>'
     },
     {
       question: "Qui puis-je contacter pour plus d'informations ?",
       answer:
-        "Pour plus d'informations, contactez Siaka Joe Sirleaf. " +
+        "Pour plus d'informations, Contactez-nous à " +
         'Email: <a href="mailto:tarjahtech@gmail.com">tarjahtech@gmail.com</a>'
     }
   ]
