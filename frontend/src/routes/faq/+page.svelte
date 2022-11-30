@@ -27,7 +27,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    background: $color-primary;
+
     padding: 1rem;
 
     @include mobile {
@@ -44,10 +44,12 @@
     }
 
     .content {
+      background: $color-primary;
       display: flex;
       flex-direction: column;
       max-width: $container-max-width;
       gap: 1rem;
+      padding: 1rem;
 
       .button {
         margin-left: auto;

@@ -39,10 +39,10 @@
 
     .faq__question {
       display: flex;
-      padding: 2rem;
+      padding: 1.5rem;
       justify-content: space-between;
       cursor: pointer;
-      font-size: 1.3rem;
+      line-break: auto;
 
       background: white;
       .faq__question_opener {
@@ -51,9 +51,10 @@
     }
 
     .faq__answer {
-      padding: 2rem;
+      padding: 1.5rem;
       margin: 0.1rem 0;
-      font-size: 1.1rem;
+      word-wrap: break-word;
+      line-height: 1.5rem;
 
       background: white;
 
