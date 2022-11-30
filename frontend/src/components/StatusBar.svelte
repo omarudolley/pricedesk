@@ -63,6 +63,7 @@
       grid-column: span 2;
       font-weight: 600;
       font-size: 1.5rem;
+      line-height: 2rem;
       @include mobile {
         font-size: 1rem;
         grid-column: span 1;
