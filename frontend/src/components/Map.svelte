@@ -196,8 +196,7 @@
   .map {
     position: relative;
     margin: 2rem 0;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
-    border-radius: 0.5rem;
+    border: 0.5px solid gray;
     padding: 0.5rem;
 
     @include mobile {

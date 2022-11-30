@@ -99,8 +99,8 @@
 
 <style>
   :global(.bx--modal-container) {
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
-    border-radius: 0.5rem;
+    border: 0.5px solid gray;
+    padding: 0.5rem;
     background: white;
   }
   :global(.bx--modal-header__heading) {

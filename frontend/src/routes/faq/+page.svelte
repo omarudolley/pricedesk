@@ -1,7 +1,8 @@
 <script>
   import { faqs } from '$lib/data'
   import { currentLang } from '$lib/stores'
-  import { Accordion, AccordionItem, Button } from 'carbon-components-svelte'
+  import FAQ from '$components/FAQ.svelte'
+  import { Button } from 'carbon-components-svelte'
 </script>
 
 <div class="container">
@@ -9,17 +10,13 @@
     <h2 class="header">
       {#if $currentLang === 'en'}Frequently asked questions:{:else}Questions fréquemment posées:{/if}
     </h2>
-    <Accordion size="xl">
-      {#if $currentLang}
-        {#each faqs[$currentLang] as item}
-          <AccordionItem title={item.question}>
-            <p>
-              {@html item.answer}
-            </p>
-          </AccordionItem>
-        {/each}
-      {/if}
-    </Accordion>
+
+    {#if $currentLang}
+      {#each faqs[$currentLang] as item}
+        <FAQ question={item.question} answer={item.answer} />
+      {/each}
+    {/if}
+
     <div class="button">
       <Button kind="secondary" href="/">Back</Button>
     </div>
@@ -30,6 +27,8 @@
   .container {
     display: flex;
     flex-direction: column;
+    background: $color-primary;
+    padding: 1rem;
 
     @include mobile {
       padding: 1rem;
@@ -48,19 +47,12 @@
       display: flex;
       flex-direction: column;
       max-width: $container-max-width;
-      gap: 2rem;
+      gap: 1rem;
 
-      .item {
-        padding: 1.5rem;
-      }
       .button {
         margin-left: auto;
         padding: 1rem;
       }
-    }
-
-    :global(.bx--btn) {
-      background: #0f62fe;
     }
   }
 </style>
