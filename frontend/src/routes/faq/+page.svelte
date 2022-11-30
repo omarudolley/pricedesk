@@ -7,9 +7,12 @@
 
 <div class="container">
   <div class="content">
-    <h2 class="header">
+    <div class="header">
       {#if $currentLang === 'en'}Frequently asked questions:{:else}Questions fréquemment posées:{/if}
-    </h2>
+    </div>
+    <div class="underline">
+      <hr />
+    </div>
 
     {#if $currentLang}
       {#each faqs[$currentLang] as item}
@@ -35,10 +38,16 @@
     }
 
     .header {
-      font-weight: 600;
+      width: 100%;
 
+      padding: 0.625rem;
+      border-radius: 0.625rem;
+      grid-column: span 2;
+      font-weight: 600;
+      font-size: 1.5rem;
       @include mobile {
         font-size: 1rem;
+        grid-column: span 1;
       }
     }
 
