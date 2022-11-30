@@ -9,8 +9,8 @@
   "Brick (4-inch)_change": 0.0,
   "Brick (4-inch)_last_recorded": 0.39,
   "Brick (6-inch)": 0.49,
-  "Brick (6-inch)_change": 0.0,
-  "Brick (6-inch)_last_recorded": 0.49,
+  "Brick (6-inch)_change": 0.04,
+  "Brick (6-inch)_last_recorded": 0.45,
   "Brick (8-inch)": 0.58,
   "Brick (8-inch)_change": 0.0,
   "Brick (8-inch)_last_recorded": 0.58,
@@ -106,8 +106,8 @@
   "Rice (50kg)_change": 0.0,
   "Rice (50kg)_last_recorded": 38.96,
   "Rice (cup)": 0.39,
-  "Rice (cup)_change": 0.0,
-  "Rice (cup)_last_recorded": 0.39,
+  "Rice (cup)_change": 0.03,
+  "Rice (cup)_last_recorded": 0.36,
   "Roofing Zinc (bundle)": 87.66,
   "Roofing Zinc (bundle)_change": 0.0,
   "Roofing Zinc (bundle)_last_recorded": 87.66,
@@ -168,5 +168,5 @@
   "Whitewash (bag)": 9.74,
   "Whitewash (bag)_change": 0.0,
   "Whitewash (bag)_last_recorded": 9.74,
-  "updatedOn": "27/11/2022, 18:54"
+  "updatedOn": "30/11/2022, 18:40"
 }

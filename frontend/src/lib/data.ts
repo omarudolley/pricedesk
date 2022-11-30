@@ -193,8 +193,8 @@ export const websiteContent: {
     fr: 'Les propositions de fonctionnalités supplémentaires sont les bienvenues sur notre Github'
   },
   intro: {
-    en: 'Follow the Liberian market easily in one place.',
-    fr: 'Suivez facilement le marché Libérien en un seul endroit.'
+    en: 'Follow the Liberian market easily in one place. Select item to view detail',
+    fr: "Suivez facilement le marché Libérien en un seul endroit. sélectionnez l'élément pour afficher le détail"
   },
   less: {
     en: 'show less',

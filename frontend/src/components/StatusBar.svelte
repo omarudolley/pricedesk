@@ -1,6 +1,6 @@
 <script>
   import { currentListing, currentLang } from '$lib/stores'
-  import RenderStatusItem from '$components/RenderStatusItem.svelte'
+  import RenderStatusItem from '$components/StatusBarItem.svelte'
   import { websiteContent, rates, commodityGrid } from '$lib/data'
 
   export let setModal

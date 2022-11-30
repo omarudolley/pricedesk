@@ -1,6 +1,8 @@
 <script>
   import { currentLang, currentCurrency } from '$lib/stores'
   import { websiteContent } from '$lib/data'
+  import IncreaseLogo from '$lib/assets/increase.svg'
+  import DecreaseLogo from '$lib/assets/decrease.svg'
   export let title
   export let priceListing
   export let setModal
@@ -15,19 +17,21 @@
     {:else}
       <p class="item_price">$ {priceListing[title.en]} {$currentCurrency.name}</p>
     {/if}
-    <p
+    <div
       class="item_change {priceListing[`${title.en}_change`] === 0
         ? 'neutral'
         : priceListing[`${title.en}_change`] > 0
         ? 'positive'
         : 'negative'}"
     >
-      {priceListing[`${title.en}_change`] === 0
-        ? '-'
-        : priceListing[`${title.en}_change`] > 0
-        ? priceListing[`${title.en}_change`]
-        : Math.abs(priceListing[`${title.en}_change`])}
-    </p>
+      {#if priceListing[`${title.en}_change`] === 0}{:else if priceListing[`${title.en}_change`] > 0}
+        {priceListing[`${title.en}_change`]}
+        <IncreaseLogo />
+      {:else}
+        {priceListing[`${title.en}_change`]}
+        <DecreaseLogo />
+      {/if}
+    </div>
     {#if title.en.startsWith('USD')}
       <p class="last-recorded">
         {websiteContent.lastRecordedRate[$currentLang]}
@@ -82,7 +86,7 @@
       }
 
       .item_price {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 1.2rem;
         color: $color-black;
         margin: 0;
@@ -94,19 +98,20 @@
       }
 
       .item_change {
+        display: flex;
+        align-items: center;
+        gap: 2px;
         font-size: 0.8rem;
         line-height: 130%;
         position: absolute;
-        width: 3rem;
-        height: 1.25rem;
-        background: $color-light-background;
-        color: $color-black;
+        width: 4rem;
+        height: 1.7rem;
         border-radius: 0.3rem;
         text-align: center;
         margin: 0;
         padding-top: 2px;
-        top: 0.625rem;
-        right: 0.625rem;
+        top: 0.4rem;
+        right: 0rem;
       }
 
       .last-recorded {
@@ -123,16 +128,10 @@
       }
 
       .positive {
-        color: $color-error;
-        &::before {
-          content: '\2191';
-        }
+        color: $color-success;
       }
       .negative {
-        color: $color-success;
-        &::before {
-          content: '\2193';
-        }
+        color: $color-error;
       }
       .neutral {
         color: $color-neutral;
