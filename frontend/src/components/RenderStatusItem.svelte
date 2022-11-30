@@ -54,7 +54,7 @@
     min-width: 12rem;
     max-width: 20rem;
     padding: 0.625rem;
-    border-radius: 0.625rem;
+    border-radius: 0.2rem;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
     background: white;
     cursor: pointer;
