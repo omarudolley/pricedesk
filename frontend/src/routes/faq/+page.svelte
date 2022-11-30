@@ -36,7 +36,6 @@
 
     .header {
       font-weight: 600;
-      padding: 1rem;
 
       @include mobile {
         font-size: 1rem;
@@ -53,7 +52,6 @@
 
       .button {
         margin-left: auto;
-        padding: 1rem;
       }
     }
   }
