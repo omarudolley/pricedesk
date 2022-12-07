@@ -113,4 +113,19 @@
       font-size: 1rem;
     }
   }
+
+  .hs::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  .hs::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0.4rem;
+  }
+
+  .hs::-webkit-scrollbar-thumb {
+    background-color: white;
+    outline: 1px solid slategrey;
+    border-radius: 0.4rem;
+  }
 </style>
