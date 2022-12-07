@@ -82,7 +82,6 @@
     grid-gap: var(--gutter) 0;
     grid-template-columns: var(--gutter) 1fr var(--gutter);
     align-content: start;
-    overflow-y: scroll;
     padding: 1.875rem;
   }
 
@@ -99,7 +98,7 @@
     gap: 1rem;
     grid-template-columns: repeat(var(--total), 14rem);
 
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x proximity;
     padding: 1rem 0;
   }
