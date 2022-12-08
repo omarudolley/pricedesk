@@ -7,7 +7,7 @@
         [null],
         [null],
         [null],
-        [0.0],
+        [19.48],
         [null],
         [null],
         [null],
@@ -27,7 +27,7 @@
         [null],
         [null],
         [null],
-        [0.0],
+        [19.48],
         [null],
         [null],
         [null],
@@ -39,6 +39,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [19.48],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Beef(Ibs)": [
@@ -81,6 +101,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [3.14],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Brick (4-inch)": [
@@ -123,6 +163,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.39],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Brick (6-inch)": [
@@ -165,6 +225,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.47],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Brick (8-inch)": [
@@ -207,6 +287,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.71],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Cement (bag)": [
@@ -249,6 +349,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [8.28],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Charcoal (bag)": [
@@ -291,6 +411,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.55],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Corned Beef (1 can)": [
@@ -333,6 +473,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.97],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Corned Beef (carton)": [
@@ -375,6 +535,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [46.75],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Crush rock (blade)": [
@@ -385,7 +565,7 @@
         [null],
         [null],
         [null],
-        [0.0],
+        [73.05],
         [null],
         [null],
         [null],
@@ -405,7 +585,7 @@
         [null],
         [null],
         [null],
-        [0.0],
+        [73.05],
         [null],
         [null],
         [null],
@@ -417,6 +597,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [73.05],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Cube Magi(pk)": [
@@ -459,6 +659,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [3.25],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Diesel (gallon)": [
@@ -501,6 +721,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [5.19],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Eggs (carton)": [
@@ -543,6 +783,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [53.57],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Eggs(cart)": [
@@ -585,6 +845,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.87],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Flour(bag)": [
@@ -627,6 +907,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [38.64],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Garri (bag)": [
@@ -669,6 +969,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [32.47],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Garri (bucket)": [
@@ -711,6 +1031,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [3.25],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Garri (cup)": [
@@ -753,6 +1093,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.32],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Gasoline (gallon)": [
@@ -795,6 +1155,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.42],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Loaf of bread (Fula)": [
@@ -837,6 +1217,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.65],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Loaf of bread (Round)": [
@@ -879,6 +1279,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.32],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Milk (carton)": [
@@ -921,6 +1341,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [21.43],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Milk (tin)": [
@@ -963,6 +1403,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.65],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Oil Paint (bucket)": [
@@ -1005,6 +1465,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [77.92],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Oil Paint (gallon)": [
@@ -1047,6 +1527,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [12.99],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Onions(bag)": [
@@ -1089,6 +1589,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [9.74],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Palm oil (1.5L)": [
@@ -1131,6 +1651,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [2.6],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Palm oil (500ml)": [
@@ -1173,6 +1713,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.97],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Palm oil (gallon)": [
@@ -1215,6 +1775,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [32.47],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Palm oil (tin)": [
@@ -1257,6 +1837,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [31.17],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Plank (2\" by 2\")": [
@@ -1299,6 +1899,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [2.32],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Plank (2\" by 4\")": [
@@ -1341,6 +1961,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.55],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Plank (2\" by 6\")": [
@@ -1383,6 +2023,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [5.84],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Rice (25kg)": [
@@ -1425,6 +2085,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [18.18],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Rice (50kg)": [
@@ -1467,6 +2147,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [29.22],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Rice (cup)": [
@@ -1509,6 +2209,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.39],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Roofing Zinc (bundle)": [
@@ -1551,6 +2271,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [87.66],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Roofing Zinc (sheet)": [
@@ -1593,6 +2333,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.87],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Roofing nail (box)": [
@@ -1635,6 +2395,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [14.61],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Round pole (single)": [
@@ -1677,6 +2457,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.74],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Steel rod (single)": [
@@ -1719,6 +2519,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [10.06],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Sugar (bag)": [
@@ -1761,6 +2581,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [50.32],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Sugar (bucket)": [
@@ -1803,6 +2643,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [4.55],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Sugar (cup)": [
@@ -1845,6 +2705,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.65],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "USD buying rate": [
@@ -1887,6 +2767,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [154.0],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "USD selling rate": [
@@ -1929,6 +2829,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [150.0],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Vegetable oil (1.5L)": [
@@ -1971,6 +2891,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [2.27],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Vegetable oil (500ml)": [
@@ -2013,6 +2953,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [1.3],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Vegetable oil (gallon)": [
@@ -2055,6 +3015,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [9.74],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Vegetable oil (tin)": [
@@ -2097,6 +3077,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [31.17],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Water (sack)": [
@@ -2139,6 +3139,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.65],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Water Paint (bucket)": [
@@ -2181,6 +3201,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [48.7],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Water Paint (gallon)": [
@@ -2223,6 +3263,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [8.12],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Water bottle (1.5L)": [
@@ -2265,6 +3325,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [3.46],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Water bottle (500ml)": [
@@ -2307,6 +3387,26 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [0.54],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
   "Whitewash (bag)": [
@@ -2349,8 +3449,28 @@
         [null]
       ],
       "date": "11/27/2022"
+    },
+    {
+      "data": [
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [9.74],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null],
+        [null]
+      ],
+      "date": "12/7/2022"
     }
   ],
-  "dates": ["11/20/2022", "11/27/2022"],
-  "updatedOn": "30/11/2022, 18:40"
+  "dates": ["11/20/2022", "11/27/2022", "12/7/2022"],
+  "updatedOn": "08/12/2022, 12:14"
 }
