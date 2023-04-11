@@ -23,9 +23,9 @@ jobs:
 
       - name: Install Poetry
         run: pip install poetry
-
+      # pin pnpm version to the version of the lock-file
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@7.13.2
 
       - name: Install dependencies
         run: poetry install
