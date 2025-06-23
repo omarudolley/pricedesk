@@ -36,7 +36,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
       question: 'Who can I contact for more information?',
       answer:
         'For more information contact us at' +
-        ' <a href="mailto:tarjahtech@gmail.com">tarjahtech@gmail.com</a>'
+        ' <a href="mailto:admin@smartchance.org">admin@smartchance.org</a>'
     }
   ],
   fr: [
@@ -57,7 +57,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     {
       question: "Qui gère l'application ?",
       answer:
-        "L'application est gérée par <a href='https://www.facebook.com/Az40tt/'>Shine Liberia</a>"
+        "L'application est gérée par <a href='https://www.facebook.com/Az40tt/'>Smartchance</a>"
     },
     {
       question: "J'ai une demande de fonctionnalité, où puis-je la soumettre ?",
@@ -75,7 +75,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
       question: "Qui puis-je contacter pour plus d'informations ?",
       answer:
         "Pour plus d'informations, Contactez-nous à " +
-        'Email: <a href="mailto:tarjahtech@gmail.com">tarjahtech@gmail.com</a>'
+        'Email: <a href="mailto:admin@smartchance.org">admin@smartchance.org</a>'
     }
   ]
 }
