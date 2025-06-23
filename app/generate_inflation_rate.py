@@ -20,8 +20,8 @@ def main():
     logger.info("Loading local data files")
     data_from_google_drive = pd.read_csv(LISTING_CSV_PATH)
 
-    data_from_google_drive.drop("Timestamp", inplace=True, axis=1)
-    data_from_google_drive.drop("Location", inplace=True, axis=1)
+    data_from_google_drive.drop("Timestamp", inplace=True, axis=1, errors='ignore')
+    data_from_google_drive.drop("Location", inplace=True, axis=1, errors='ignore')
 
     mean_df = data_from_google_drive.groupby("Date").mean()
 
