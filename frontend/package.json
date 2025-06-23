@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite dev",
-    "build": "pnpm clean && vite build && npx svelte-sitemap --domain https://libmarketindex.com",
+    "build": "pnpm clean && vite build && npx svelte-sitemap --domain https://market.smartchance.org",
     "preview": "vite preview",
     "test": "playwright test",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
