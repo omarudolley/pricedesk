@@ -18,7 +18,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
 
     {
       question: 'Who manages the app?',
-      answer: "The app is managed by <a href='https://www.facebook.com/Az40tt/'>Shine Liberia</a>"
+      answer: "The app is managed by <a href='https://smartchance.org'>SmartChance</a>"
     },
     {
       question: 'I have a feature request , where can i submit it?',
@@ -57,7 +57,7 @@ export const faqs: { en: FAQ[]; fr: FAQ[] } = {
     {
       question: "Qui gère l'application ?",
       answer:
-        "L'application est gérée par <a href='https://www.facebook.com/Az40tt/'>Smartchance</a>"
+        "L'application est gérée par <a href='https://smartchance.org'>Smartchance</a>"
     },
     {
       question: "J'ai une demande de fonctionnalité, où puis-je la soumettre ?",
