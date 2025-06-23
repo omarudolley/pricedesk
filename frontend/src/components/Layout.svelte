@@ -52,7 +52,7 @@
     </Content>
   </div>
   <div class="footer">
-    powered by
+    powered by&nbsp;
 
     <a href="https://smartchance.org" target="_blank">
      SmartChance
