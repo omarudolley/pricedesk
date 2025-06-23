@@ -52,10 +52,10 @@
     </Content>
   </div>
   <div class="footer">
-    {websiteContent.footer[$currentLang]} —
+    powered by
 
-    <a href="https://github.com/omarudolley/pricedesk/issues" target="_blank">
-      https://github.com/omarudolley/pricedesk/issues
+    <a href="https://smartchance.org" target="_blank">
+     SmartChance
     </a>
   </div>
 </div>
