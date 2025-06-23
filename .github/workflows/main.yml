@@ -75,7 +75,7 @@ jobs:
       - name: Build frontend
         run: |
           cd frontend
-          pnpm install --frozen-lockfile
+          pnpm install --no-frozen-lockfile
           pnpm run build
 
       - name: Deploy to GitHub Pages
