@@ -28,7 +28,7 @@ jobs:
         run: npm install -g pnpm@7.13.2
 
       - name: Cache frontend data
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache
         with:
           path: frontend/src/lib/data
@@ -95,5 +95,5 @@ jobs:
           DEPLOY_DIR: frontend/build
           MESSAGE: Deploy to GitHub Pages
           BRANCH: gh-pages
-          FQDN: https://market.emaas.online
+          FQDN: https://market.smartchance.org
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
