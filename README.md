@@ -6,7 +6,7 @@ commodities in Liberia.
 GitHub Actions are used to automatically download latest data and rebuild the site.
 
 The generated site is hosted on GitHub Pages at
-[https://libmarketindex.com/](https://libmarketindex.com/)
+[https://market.smartChance.org/](https://market.smartChance.com/)
 
 ## Project setup
 
