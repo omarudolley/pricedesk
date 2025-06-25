@@ -7,11 +7,7 @@ GOOGLE_DRIVE_PATH_SUFFIX = "/export?exportFormat=csv"
 
 LISTING_ID = "1CqjC08RQcXhC_Kg2sQEn03So9spvR_wuBIMzmukEsN0" 
 
-#183aea1tYahSyjfz4Xhgxy03tBlRLNz20IvOlwezxOAo
-
-
 LISTING_CSV_PATH = "data/listing.csv"
-
 
 LIBERIA_TZ = pytz.timezone("GMT")
 
