@@ -32,6 +32,7 @@
         <DecreaseLogo />
       {/if}
     </div>
+    <div class='item-footer'>
     {#if title.en.startsWith('USD')}
       <p class="last-recorded">
         {websiteContent.lastRecordedRate[$currentLang]}
@@ -44,6 +45,10 @@
         ]}
       </p>
     {/if}
+    <p class="link" on:click={setModal(title)}>
+      {websiteContent.seeDetail[$currentLang]}
+    </p>
+    </div>
   </div>
 </div>
 
@@ -83,6 +88,18 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         padding-right: 2.5rem;
+      }
+
+      .item-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link {
+          text-decoration: underline;
+          color: blue;
+          cursor: pointer;
+        }
       }
 
       .item_price {

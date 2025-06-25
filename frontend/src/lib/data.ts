@@ -125,11 +125,7 @@ export const commodities: {
 ]
 
 export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
-  Fuel: [
-    { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
-    { en: 'Charcoal (bag)', fr: 'Charbon (sac)' },
-    { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' }
-  ],
+
   Food: [
     { en: 'Rice (25kg)', fr: 'Riz (25kg)' },
     { en: 'Rice (50kg)', fr: 'Riz (50kg)' },
@@ -160,6 +156,14 @@ export const commodityGrid: { [key: string]: { en: string; fr: string }[] } = {
     { en: 'Water bottle (500ml)', fr: "Bouteille d'eau(500ml)" },
     { en: 'Water bottle (1.5L)', fr: "Bouteille d'eau (1.5L)" }
   ],
+
+  Fuel: [
+    { en: 'Diesel (gallon)', fr: 'Diesel (gallon)' },
+    { en: 'Charcoal (bag)', fr: 'Charbon (sac)' },
+    { en: 'Gasoline (gallon)', fr: 'Gasoline (gallon)' }
+  ],
+
+ 
   Construction: [
     { en: 'Cement (bag)', fr: 'Ciment (sac)' },
     { en: 'Brick (4-inch)', fr: 'Brique (4 pouces)' },
@@ -235,6 +239,10 @@ export const websiteContent: {
   rate: {
     en: 'Rate',
     fr: 'Taux'
+  },
+  seeDetail:{
+    en: 'View detail',
+    fr: 'Voir les détails'
   }
 }
 
