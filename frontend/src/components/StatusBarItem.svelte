@@ -99,6 +99,7 @@
           text-decoration: underline;
           color: blue;
           cursor: pointer;
+          font-size: 0.6rem;
         }
       }
 
