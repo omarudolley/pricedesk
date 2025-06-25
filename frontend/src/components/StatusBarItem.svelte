@@ -97,7 +97,7 @@
 
         .link {
           text-decoration: underline;
-          color: blue;
+          color: $color-primary;
           cursor: pointer;
           font-size: 0.6rem;
         }
