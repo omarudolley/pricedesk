@@ -20,7 +20,7 @@
     </div>
 
     <div class="app">
-      {#each Object.keys(commodityGrid).sort() as key}
+      {#each Object.keys(commodityGrid) as key}
         <h4 class="sub-header">{key}</h4>
         <div class="hs full" style="--total: {commodityGrid[key].length}">
           {#each commodityGrid[key].sort( (a, b) => a[$currentLang].localeCompare(b[$currentLang]) ) as title}
