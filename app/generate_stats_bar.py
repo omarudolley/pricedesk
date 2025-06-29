@@ -7,6 +7,7 @@ from app.helper import generate_in_usd
 import pandas as pd
 import numpy as np
 import pytz
+from datetime import datetime
 from app.constants import (
     LISTING_CSV_PATH,
     STATS_BAR_LRD_PATH,
