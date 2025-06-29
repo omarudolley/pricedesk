@@ -20,41 +20,45 @@ def main():
     logger.info("Loading local data files")
     df = pd.read_csv(LISTING_CSV_PATH)
 
-    # Drop optional columns if they exist
+   # Drop optional or irrelevant columns
     df.drop(columns=["Timestamp", "Location"], errors="ignore", inplace=True)
 
-    # Convert Date to datetime
-    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    # Parse the date column assuming MM/DD/YYYY format
+    df["Date"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
+
+    # Remove rows with invalid or missing dates
     df.dropna(subset=["Date"], inplace=True)
 
-    # Add Month column for grouping
+    # Convert dates to monthly period for grouping
     df["Month"] = df["Date"].dt.to_period("M")
 
-    # Select numeric columns only
+    # Select numeric columns (assumed to be prices)
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
     if "Date" in numeric_cols:
         numeric_cols.remove("Date")
 
     if not numeric_cols:
-        logger.warning("No numeric columns found for inflation analysis.")
+        logger.warning("No numeric columns found for price analysis.")
         return
 
-    # Group by month and compute mean prices
+    # Group data by month and calculate the mean for each product/category
     monthly_avg = df.groupby("Month")[numeric_cols].mean()
 
-    # Ensure chronological order
+    # Sort by month (important for percent change calculation)
     monthly_avg.sort_index(inplace=True)
 
-    # Sum of all mean prices per month = simple price index
+    # Create a simple price index as the sum of monthly means
     monthly_avg["PriceIndex"] = monthly_avg.sum(axis=1)
 
-    # Calculate month-over-month inflation rate
+    # Calculate month-to-month inflation as percent change
     monthly_avg["InflationRate"] = monthly_avg["PriceIndex"].pct_change() * 100
 
+    # Prepare final dictionary for JSON output
     final_ld_data = {
         "dates": monthly_avg.index.astype(str).tolist(),
         "data": monthly_avg["InflationRate"].round(2).where(pd.notnull).tolist()
     }
+
     
     save_as_json(INFLATION_DATA_PATH, final_ld_data)
 
