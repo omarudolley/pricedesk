@@ -20,21 +20,29 @@ def main():
     logger.info("Loading local data files")
     data_from_google_drive = pd.read_csv(LISTING_CSV_PATH)
 
-    data_from_google_drive.drop("Timestamp", inplace=True, axis=1, errors='ignore')
-    data_from_google_drive.drop("Location", inplace=True, axis=1, errors='ignore')
+    # Clean optional columns
+    df.drop(columns=["Timestamp", "Location"], errors="ignore", inplace=True)
 
-    mean_df = data_from_google_drive.groupby("Date").mean()
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    df.dropna(subset=["Date"], inplace=True)
 
-    mean_df["Sum"] = mean_df.sum(axis=1)
+    df["Month"] = df["Date"].dt.to_period("M")
 
-    mean_df["pdt_chg"] = mean_df["Sum"].pct_change()
+    numeric_cols = df.select_dtypes(include="number").columns
+    if "Date" in numeric_cols:
+        numeric_cols = numeric_cols.drop("Date")
 
-    data = mean_df["pdt_chg"].round(3).tolist()
+    monthly_avg = df.groupby("Month")[numeric_cols].mean()
 
-    dates = list(set(data_from_google_drive["Date"]))
-    dates.sort()
-    final_ld_data = {"dates": dates, "data": data}
+    monthly_avg["PriceIndex"] = monthly_avg.sum(axis=1)
 
+    monthly_avg["InflationRate"] = monthly_avg["PriceIndex"].pct_change() * 100
+
+    final_ld_data = {
+        "dates": monthly_avg.index.astype(str).tolist(),
+        "data": monthly_avg["InflationRate"].round(2).fillna(None).tolist()
+    }
+    
     save_as_json(INFLATION_DATA_PATH, final_ld_data)
 
 
