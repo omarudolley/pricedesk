@@ -44,16 +44,17 @@ def main():
     # Parse date column and localize timezone
     df = parse_dates_column(df)
 
-    # Convert to datetime objects (assuming 'dd/mm/yyyy' format)
+    # Convert column to datetime
     df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y', errors='coerce')
 
-    # Drop NaT values that couldn't be parsed (optional safety)
+    # Drop bad dates
     df = df.dropna(subset=['Date'])
 
-    # Extract and sort unique dates chronologically
+    # Get unique dates and sort
     dates = sorted(df['Date'].unique())
 
-    dates = [d.strftime('%d/%m/%Y') for d in dates]
+    # Convert datetime64 to string safely
+    dates = [pd.Timestamp(d).strftime('%d/%m/%Y') for d in dates]
 
     # Process raw and USD data
     df_avg = average_values_for_montserrado(df, dates)
