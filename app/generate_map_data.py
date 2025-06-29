@@ -53,6 +53,8 @@ def main():
     # Extract and sort unique dates chronologically
     dates = sorted(df['Date'].unique())
 
+    dates = [d.strftime('%d/%m/%Y') for d in dates]
+
     # Process raw and USD data
     df_avg = average_values_for_montserrado(df, dates)
     df_usd = generate_in_usd(df_avg)
