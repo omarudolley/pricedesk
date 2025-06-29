@@ -40,7 +40,7 @@ def main():
 
     final_ld_data = {
         "dates": monthly_avg.index.astype(str).tolist(),
-        "data": monthly_avg["InflationRate"].round(2).fillna(value=None).tolist()
+        "data": monthly_avg["InflationRate"].round(2).where(pd.notnull).tolist()
     }
     
     save_as_json(INFLATION_DATA_PATH, final_ld_data)
