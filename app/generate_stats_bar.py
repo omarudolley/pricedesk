@@ -28,13 +28,12 @@ def main():
     # Clean and preprocess
     df.drop(columns=["Timestamp", "Location"], inplace=True, errors="ignore")
 
-    # Parse dates properly
+    # Parse dates properly and keep them as datetime
     df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y", errors="coerce")
     df.dropna(subset=["Date"], inplace=True)
-    df["Date"] = df["Date"].dt.strftime("%d/%m/%Y")  # keep consistent string format
 
     # Group by date and average numeric columns
-    mean_df_lrd = df.groupby("Date").mean().sort_index()
+    mean_df_lrd = df.groupby("Date").mean().sort_index()  
     mean_df_usd = generate_in_usd(mean_df_lrd)
 
     # Round for output
