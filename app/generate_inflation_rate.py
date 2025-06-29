@@ -18,7 +18,7 @@ from app.constants import (
 @analyze_memory
 def main():
     logger.info("Loading local data files")
-    data_from_google_drive = pd.read_csv(LISTING_CSV_PATH)
+    df = pd.read_csv(LISTING_CSV_PATH)
 
     # Clean optional columns
     df.drop(columns=["Timestamp", "Location"], errors="ignore", inplace=True)
