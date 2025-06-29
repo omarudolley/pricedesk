@@ -20,22 +20,35 @@ def main():
     logger.info("Loading local data files")
     df = pd.read_csv(LISTING_CSV_PATH)
 
-    # Clean optional columns
+    # Drop optional columns if they exist
     df.drop(columns=["Timestamp", "Location"], errors="ignore", inplace=True)
 
+    # Convert Date to datetime
     df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
     df.dropna(subset=["Date"], inplace=True)
 
+    # Add Month column for grouping
     df["Month"] = df["Date"].dt.to_period("M")
 
-    numeric_cols = df.select_dtypes(include="number").columns
+    # Select numeric columns only
+    numeric_cols = df.select_dtypes(include="number").columns.tolist()
     if "Date" in numeric_cols:
-        numeric_cols = numeric_cols.drop("Date")
+        numeric_cols.remove("Date")
 
+    if not numeric_cols:
+        logger.warning("No numeric columns found for inflation analysis.")
+        return
+
+    # Group by month and compute mean prices
     monthly_avg = df.groupby("Month")[numeric_cols].mean()
 
+    # Ensure chronological order
+    monthly_avg.sort_index(inplace=True)
+
+    # Sum of all mean prices per month = simple price index
     monthly_avg["PriceIndex"] = monthly_avg.sum(axis=1)
 
+    # Calculate month-over-month inflation rate
     monthly_avg["InflationRate"] = monthly_avg["PriceIndex"].pct_change() * 100
 
     final_ld_data = {
