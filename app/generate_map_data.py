@@ -15,52 +15,64 @@ from app.constants import (
     TODAY_DMYHM,
 )
 
+LOCAL_TZ = pytz.timezone("Africa/Monrovia")
+TODAY_DMYHM = datetime.now(LOCAL_TZ).strftime("%d/%m/%Y %H:%M")
+
+
+def parse_dates_column(df):
+    """Parse 'Date' column as datetime using DD/MM/YYYY format, localize to Monrovia."""
+    df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y", errors="coerce")
+    df.dropna(subset=["Date"], inplace=True)
+
+    # Normalize time to midnight and convert to timezone
+    df["Date"] = df["Date"].dt.tz_localize("UTC").dt.tz_convert(LOCAL_TZ)
+    df["Date"] = df["Date"].dt.strftime("%d/%m/%Y")  # Convert back to string for output keys
+    return df
+
 
 @analyze_time
 @analyze_memory
 def main():
     logger.info("Loading local data files")
-    data_from_google_drive = pd.read_csv(LISTING_CSV_PATH)
+    df = pd.read_csv(LISTING_CSV_PATH)
 
-    data_from_google_drive.drop("Timestamp", inplace=True, axis=1)
-    dates = list(set(data_from_google_drive["Date"]))
-    dates.sort()
+   # Drop optional column
+    df.drop("Timestamp", inplace=True, axis=1, errors="ignore")
 
-    df = average_values_for_montserrado(data_from_google_drive, dates)
+    # Parse date column and localize timezone
+    df = parse_dates_column(df)
 
-    df_usd = generate_in_usd(df)
+    # Extract and sort unique formatted dates
+    dates = sorted(set(df["Date"]))
 
-    df = df.round(0)
+    # Process raw and USD data
+    df_avg = average_values_for_montserrado(df, dates)
+    df_usd = generate_in_usd(df_avg)
+
+    df_avg = df_avg.round(0)
     df_usd = df_usd.round(2)
 
-    df.set_index(["Date", "Location"], inplace=True)
+    # Set multi-index
+    df_avg.set_index(["Date", "Location"], inplace=True)
     df_usd.set_index(["Date", "Location"], inplace=True)
 
-    final_usd_data = {"dates": dates, "updatedOn": TODAY_DMYHM}
+    # Convert to lookup dicts
+    df_avg_dict = df_avg.to_dict()
+    df_usd_dict = df_usd.to_dict()
+
+    # Prepare output
     final_ld_data = {"dates": dates, "updatedOn": TODAY_DMYHM}
+    final_usd_data = {"dates": dates, "updatedOn": TODAY_DMYHM}
 
     for item in COMMODITY_LIST:
-        _item = df.to_dict()[item]
-        _item_usd = df_usd.to_dict()[item]
-
-        final_ld_data.update(
-            {
-                item: [
-                    {"date": d, "data": [[_item.get((d, l))] for l in LOCATION]}
-                    for d in dates
-                ]
-            }
-        )
-
-        final_usd_data.update(
-            {
-                item: [
-                    {"date": d, "data": [[_item_usd.get((d, l))] for l in LOCATION]}
-                    for d in dates
-                ]
-            }
-        )
-
+        final_ld_data[item] = [
+            {"date": d, "data": [[df_avg_dict[item].get((d, loc))] for loc in LOCATION]}
+            for d in dates
+        ]
+        final_usd_data[item] = [
+            {"date": d, "data": [[df_usd_dict[item].get((d, loc))] for loc in LOCATION]}
+            for d in dates
+        ]
     save_as_json(MAP_DATA_USD_PATH, final_usd_data)
     save_as_json(MAP_DATA_LRD_PATH, final_ld_data)
 
