@@ -19,7 +19,6 @@ from app.constants import (
 LOCAL_TZ = pytz.timezone("Africa/Monrovia")
 TODAY_DMYHM = datetime.now(LOCAL_TZ).strftime("%d/%m/%Y %H:%M")
 
-
 @analyze_time
 @analyze_memory
 def main():
