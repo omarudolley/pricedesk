@@ -24,7 +24,7 @@ def main():
     df.drop(columns=["Timestamp", "Location"], errors="ignore", inplace=True)
 
     # Parse the date column assuming MM/DD/YYYY format
-    df["Date"] = pd.to_datetime(df["Date"], format="%m/%d/%Y", errors="coerce")
+    df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y", errors="coerce")
 
     # Remove rows with invalid or missing dates
     df.dropna(subset=["Date"], inplace=True)
