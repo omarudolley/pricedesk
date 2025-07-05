@@ -81,7 +81,6 @@ COMMODITY_LIST = [
     "Flour(bag)",
 ]
 
-
 LOCATION = [
     "Gbapolu",
     "Bong",
