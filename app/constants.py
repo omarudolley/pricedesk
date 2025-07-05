@@ -14,7 +14,6 @@ LIBERIA_TZ = pytz.timezone("GMT")
 TODAY_DMYHM = datetime.today().astimezone(LIBERIA_TZ).strftime("%d/%m/%Y, %H:%M")
 YESTERDAY_YMD = datetime.strftime(datetime.today() - timedelta(1), "%Y-%m-%d")
 
-
 STATS_BAR_LRD_PATH = "frontend/src/lib/data/stats/lrd/StatsBar.json"
 STATS_BAR_USD_PATH = "frontend/src/lib/data/stats/usd/StatsBar.json"
 
